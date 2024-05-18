@@ -355,6 +355,22 @@ body{
 }
 
 .line-dropdown .line-content-wrapper{
+    color: #fff;
     display: flex;
-    
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.line-dropdown .line-content-wrapper.gray{
+    background-color: #aab2bd;
+}
+
+.line-dropdown .line-content-wrapper p{
+    margin: 10px 13.5px;
+}
+
+.line-dropdown .line-content-wrapper .line-dropdown-arrow{
+    margin: 0 10px;
 }
