@@ -37,3 +37,8 @@ for (let i = 0; i<lineDropdownBtns.length; i++){
     }
 }
 
+// Turning hamburger lines into cross by adding clicked class to left
+
+$('.left').click(function(){
+    $(this).toggleClass('clicked');
+});
