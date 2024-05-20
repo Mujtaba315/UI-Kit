@@ -352,6 +352,7 @@ body{
 
 .line-dropdown{
     width: max-content;
+    display: inline-block;
 }
 
 .line-dropdown .line-content-wrapper{
@@ -360,7 +361,11 @@ body{
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 13px;
+}
+
+.line-dropdown.open .line-content-wrapper{
+    border-radius: 5px 5px 0 0;
 }
 
 .line-dropdown .line-content-wrapper.gray{
@@ -368,9 +373,218 @@ body{
 }
 
 .line-dropdown .line-content-wrapper p{
-    margin: 10px 13.5px;
+    margin: 0px 13px;
 }
 
 .line-dropdown .line-content-wrapper .line-dropdown-arrow{
-    margin: 0 10px;
+    margin: 0 9px;
 }
+
+.line-dropdown.open .line-content-wrapper .line-dropdown-arrow{
+    transform: rotate(180deg);
+}
+
+.line-dropdown .line-dropdown-menu{
+    text-align: center;
+    color: #fff;
+    height: 0px;
+    opacity: 0;
+    transition: 0.3s ease-in;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.line-dropdown.open .line-dropdown-menu.gray{
+    background-color: #aab2bd;
+}
+
+
+.line-dropdown.open .line-dropdown-menu{
+    visibility: visible;
+    height: 58px;
+    opacity: 1;
+    border-radius: 0 0 5px 5px;
+    
+}
+
+.line-dropdown .line-dropdown-menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+.line-dropdown .line-dropdown-menu ul li{
+    list-style: none;
+    padding: 2px 0;
+    font-size: 13px;
+}
+
+.line-dropdown.open .line-dropdown-menu ul li:hover{
+    font-weight: bolder;
+}
+
+.line-dropdown.open .line-dropdown-menu ul li:active{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+
+/* Warning line dropdown */
+
+.line-dropdown .line-content-wrapper.yellow{
+    background-color: #f6bb42;
+}
+
+.line-dropdown.open .line-dropdown-menu.yellow{
+    background-color: #f6bb42;
+}
+
+
+/* Lines icon bar */
+
+.line-icon-bar{
+    width: 102px;
+    height: 34px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 8px;
+}
+
+.line-icon-bar.gray{
+    background-color: #aab2bd;
+}
+
+.line-icon-bar .left{
+    display: grid;
+    align-content: center;
+    justify-items: start;
+}
+
+.line-icon-bar .left .left-bar1{
+    background-color: #fff;
+    width: 8px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .left .left-bar2{
+    background-color: #fff;
+    width: 12px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .left .left-bar3{
+    background-color: #fff;
+    width: 10px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .left .left-bar4{
+    background-color: #fff;
+    width: 14px;
+    height: 2px;
+}
+
+.line-icon-bar .middle{
+    display: grid;
+    padding: 0 11px;
+    align-content: center;
+    justify-items: center;
+}
+
+.line-icon-bar .middle.gray{
+    border-left: 1px solid #96a0ad;
+    border-right: 1px solid #96a0ad;
+}
+
+.line-icon-bar .middle .middle-bar1{
+    background-color: #fff;
+    width: 10px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .middle .middle-bar2{
+    background-color: #fff;
+    width: 14px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .middle .middle-bar3{
+    background-color: #fff;
+    width: 10px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .middle .middle-bar4{
+    background-color: #fff;
+    width: 14px;
+    height: 2px;
+}
+
+.line-icon-bar .right{
+    display: grid;
+    align-content: center;
+    justify-items: end;
+}
+
+.line-icon-bar .right .right-bar1{
+    background-color: #fff;
+    width: 8px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .right .right-bar2{
+    background-color: #fff;
+    width: 12px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .right .right-bar3{
+    background-color: #fff;
+    width: 10px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.line-icon-bar .right .right-bar4{
+    background-color: #fff;
+    width: 14px;
+    height: 2px;
+}
+
+
+/* Lines icon bar  white */
+
+.line-icon-bar.white{
+    border: 1px solid #aab2bd;
+}
+
+.line-icon-bar .middle.white{
+    border-left: 1px solid #aab2bd;
+    border-right: 1px solid #aab2bd;
+}
+
+.line-icon-bar.white .white-linebar-background{
+    background-color: #434a54;
+}
+
+/* Label Gray */
+
+.label{
+    width: max-content;
+    height: 23px;
+    background-color: #aab2bd;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 10.2px;
+    align-content: center;
+    padding: 0 8px;
+}
+

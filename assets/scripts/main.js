@@ -9,6 +9,8 @@
 //     $(".dropdown-arrow").toggleClass('open');
 // }
 
+// Add evenlistner to all dropdown
+
 var dropdownBtns = document.querySelectorAll('.dropdown');
 // var dropdownMenu = document.querySelector('.dropdown-menu');
 for (let i=0; i<dropdownBtns.length; i++){
@@ -18,8 +20,20 @@ for (let i=0; i<dropdownBtns.length; i++){
     function toggleMenu(){
         dropdownBtns[i].classList.toggle('open');
         // dropdownMenu.classList.toggle('open');
-        $(".dropdown-arrow").toggleClass('open');
+        // $(".dropdown-arrow").toggleClass('open');
     }
 }
 
+// Add eventlistner to all line-dropdown
+
+var lineDropdownBtns = document.querySelectorAll('.line-dropdown');
+
+for (let i = 0; i<lineDropdownBtns.length; i++){
+
+    lineDropdownBtns[i].addEventListener('click', toggleMenu);
+
+    function toggleMenu(){
+        lineDropdownBtns[i].classList.toggle('open');
+    }
+}
 
