@@ -980,6 +980,8 @@ label.success-label{
 input.success-input{
     border:solid 2px #8cc152;
     margin-top: 5px;
+    width: 431px;
+    padding-right: 30px;
 }
 
 label.error-label{
@@ -990,6 +992,8 @@ label.error-label{
 input.error-input{
     border:solid 2px #da4453;
     margin-top: 5px;
+    width: 431px;
+    padding-right: 30px;
 }
 
 .input-div{
