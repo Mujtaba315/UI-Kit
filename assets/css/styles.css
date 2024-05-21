@@ -980,3 +980,24 @@ input.success-input{
     border:solid 2px #8cc152;
     margin-top: 5px;
 }
+
+label.error-label{
+    color: #da4453;
+    font-weight: bold;
+}
+
+input.error-input{
+    border:solid 2px #da4453;
+    margin-top: 5px;
+}
+
+.input-div{
+    position: relative;
+}
+
+.input-div img.success-input-img,
+.input-div img.error-input-img{
+    position: absolute;
+    right: 268px;
+    top: 18px;
+}
