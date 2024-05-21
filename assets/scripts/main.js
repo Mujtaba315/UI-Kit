@@ -42,3 +42,9 @@ for (let i = 0; i<lineDropdownBtns.length; i++){
 $('.left').click(function(){
     $(this).toggleClass('clicked');
 });
+
+// Opening inner dropdown
+
+$('.menu_dropdown  .menu_dropdown_1 ul .menu_dropdown_item.open_inner_dropdown').click(function(){
+    $(this).toggleClass('clicked');
+});
