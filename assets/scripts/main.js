@@ -48,3 +48,14 @@ $('.left').click(function(){
 $('.menu_dropdown  .menu_dropdown_1 ul .menu_dropdown_item.open_inner_dropdown').click(function(){
     $(this).toggleClass('clicked');
 });
+
+// google search input with dropdown
+
+$('.input-div.google-search.bbc ul li.bbc').click(function(){
+    $("input.google-search-input.blue-border.bbc").attr("value", $(this).html());
+});
+
+$('.input-div.google-search.123 ul li.123').click(function(){
+    $("input.google-search-input.blue-border.123").attr("value", $(this).html());
+});
+
