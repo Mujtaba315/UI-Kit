@@ -952,25 +952,49 @@ input{
     height: 33px;
     width: 461px;
     padding-left: 8px;
-    border:solid 1px #aab2bd;
+    border:solid 1.5px #aab2bd;
     border-radius: 5px;
+    box-sizing: border-box;
 }
+
+/* Gray Input */
 
 input.gray{
     background-color: #e6e9ed;
     border: none;
 }
 
+/* Text Area */
+
 textarea{
     width: 461px;
     padding-left: 8px;
-    border:solid 1px #aab2bd;
+    border:solid 1.5px #aab2bd;
     border-radius: 5px;
+    box-sizing: border-box;
 }
+
+/* Rounded Input */
 
 input.rounded{
     border-radius: 20px;
 }
+
+/* Input with labels and images */
+
+.input-div{
+    position: relative;
+    width: 461px;
+}
+
+.input-div img.success-input-img,
+.input-div img.error-input-img {
+    position: absolute;
+    right:10px;
+    top: 16px;
+}
+
+/* Success Input */
 
 label.success-label{
     color: #8cc152;
@@ -978,11 +1002,12 @@ label.success-label{
 }
 
 input.success-input{
-    border:solid 2px #8cc152;
+    border-color: #8cc152;
     margin-top: 5px;
-    width: 431px;
-    padding-right: 30px;
+    padding-right: 26.5px;
 }
+
+/* Error Input */
 
 label.error-label{
     color: #da4453;
@@ -990,19 +1015,209 @@ label.error-label{
 }
 
 input.error-input{
-    border:solid 2px #da4453;
+    border-color: #da4453;
     margin-top: 5px;
-    width: 431px;
-    padding-right: 30px;
+    padding-right: 26.5px;
 }
 
-.input-div{
+/* Google search input */
+
+.input-div .google-search-input{
+    color: #5c626b;
+    padding-right: 26.5px;
+}
+
+.input-div .google-search-input::placeholder{
+    color: #5c626b;
+}
+
+.input-div img.google-search-open {
+    position: absolute;
+    right:13px;
+    top: 16px;
+}
+
+/* Google search input with dropdown */
+
+.input-div .google-search-input.blue-border{
+    border-color: #269ecb;
+}
+
+.input-div ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13.4px;
+    color: #5c626b;
+    border: solid 1.5px #aab2bd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    box-shadow: 0px 3px 11px 0px #aab2bd, 0px 0px 3px 0px #aab2bd;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    height: 0;
+    opacity: 0;
+}
+
+.input-div ul li{
+    padding: 8.6px 0px 8.6px 8px;
+}
+
+.input-div ul li:hover {
+    color: #fff;
+    background-color: #269ecb;
+    width: calc(100% + -6px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: none !important;
+}
+
+.input-div ul li.google-search-dropdown-item{
+    border-bottom: solid 1px #e6e9ed;
+}
+
+/* Opening dropdown by hovering */
+
+.input-div.google-search:hover input{
+    border-radius: 5px 5px 0 0;
+}
+
+.input-div.google-search:hover ul{
+    visibility: visible;
+    height: 100%;
+    opacity: 1;
+}
+
+.input-div ul li.google-search-dropdown-lastitem:hover {
+    border-radius: 0 0 4px 4px;
+}
+
+/* search input with buttons on each side */
+
+.input-div.btns-on-sides,
+.input-div.action-dropdown-on-sides {
     position: relative;
 }
 
-.input-div img.success-input-img,
-.input-div img.error-input-img{
+.input-div.btns-on-sides button,
+.input-div.action-dropdown-on-sides button,
+.input-div.rounded-input-search button {
+    border: none;
+    background-color: #aab2bd;
+    width: max-content;
+    height: 33px;
+    color: #fff;
+    padding: 0 13.29px;
     position: absolute;
-    right: 268px;
-    top: 18px;
+}
+
+.input-div.btns-on-sides input{
+    padding: 0px 52px 0 40px;
+}
+
+.input-div.btns-on-sides button.left-btn{
+    border-radius: 5px 0 0 5px;
+    border: solid 1.5px #96a0ad;
+    border-right: none;
+}
+
+.input-div.btns-on-sides button.right-btn {
+    border-radius: 0 5px 5px 0;
+    border: solid 1.5px #96a0ad;
+    border-left: none;
+    right: 0;
+}
+
+/* search input with action dropdown on each side */
+
+.input-div.action-dropdown-on-sides input{
+    padding: 0px 104px 0 104px;
+}
+
+.input-div.action-dropdown-on-sides button.left-btn{
+    width: 100px;
+    background-color: #da4453;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-div.action-dropdown-on-sides button.right-btn{
+    width: 100px;
+    background-color: #3bafda;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0 5px 5px 0;
+    right: 0;
+    top: 0;
+}
+
+/* Rounded Search */
+
+.input-div.rounded-input-search button.rounded-input-search-btn{
+    background-color: #3bafda;
+    border-radius: 0 20px 20px 0;
+    right: 0;
+    width: 73px;
+}
+
+/* Warning Input */
+
+label.warning-label{
+    color: #f6bb42;
+    font-weight: bold;
+}
+
+input.warning-input{
+    border-color: #f6bb42;
+    margin-top: 5px;
+    padding-right: 30px;
+}
+
+.input-div img.warning-input-img1{
+    position: absolute;
+    right: 10px;
+    top: 14px;
+} 
+
+.input-div img.warning-input-img2{
+    position: absolute;
+    right: 17px;
+    top: 19.5px;
+} 
+
+/* Number increment / decrement input */
+
+.input-div .num-inc-dec{
+    width: fit-content;
+    display: grid;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.input-div .num-inc-dec button{
+    border: none;
+    background-color: #3bafda;
+    height: 16px;
+    width: 20px;
+}
+
+.input-div .num-inc-dec button img{
+    margin-bottom: 3.5px;
+}
+
+.input-div .num-inc-dec .inc-btn{
+    border-radius: 0 5px 0 0;
+}
+
+.input-div .num-inc-dec .dec-btn{
+    border-radius: 0 0 5px 0;
 }
