@@ -55,6 +55,8 @@ $('.input-div.google-search.bbc ul li.bbc').click(function(){
     $("input.google-search-input.blue-border.bbc").attr("value", $(this).html());
 });
 
+// 1 2 3 dropdown
+
 $('.input-div.google-search.123 ul li.123').click(function(){
     $("input.google-search-input.blue-border.123").attr("value", $(this).html());
 });
