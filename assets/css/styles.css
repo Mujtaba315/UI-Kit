@@ -1,7 +1,13 @@
+
+/* Day 17 / 5 / 24 */
+
+/* buttons */
+
 body{
     background-color: #f1f2f6;
 }
 
+/* buttons */
 
 .gray-btn{
     color: #fff;
@@ -347,6 +353,8 @@ body{
     background-color: #aab2bd;
 } */
 
+
+/* Day 20 / 5 / 24 */
 
 /* Gray line dropdown */
 
@@ -711,6 +719,8 @@ body{
     border-color: transparent transparent transparent #545a64;
 }
 
+/* Day 21 / 5 / 24 */
+
 /* Sidebar */
 
 .sidebars{
@@ -735,6 +745,7 @@ body{
 .sidebar .sidebar-icon.last{
     height: 33px;
 }
+
 
 /* Sidebar Gray */
 
@@ -963,6 +974,8 @@ input.gray{
     background-color: #e6e9ed;
     border: none;
 }
+
+/* Day 22 / 5 / 24 */
 
 /* Text Area */
 
@@ -1221,3 +1234,8 @@ input.warning-input{
 .input-div .num-inc-dec .dec-btn{
     border-radius: 0 0 5px 0;
 }
+
+
+/* Day 23 / 5 / 24 */
+
+/* Checkboxes and Radios */

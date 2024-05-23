@@ -1,3 +1,6 @@
+
+// Day 17 / 5 / 24
+
 // var dropdownBtn = document.querySelector('.dropdown');
 // // var dropdownMenu = document.querySelector('.dropdown-menu');
 
@@ -24,6 +27,10 @@ for (let i=0; i<dropdownBtns.length; i++){
     }
 }
 
+
+
+// Day 20 / 5 / 24
+
 // Add eventlistner to all line-dropdown
 
 var lineDropdownBtns = document.querySelectorAll('.line-dropdown');
@@ -43,11 +50,19 @@ $('.left').click(function(){
     $(this).toggleClass('clicked');
 });
 
+
+
+// Day 21 / 5 / 24
+
 // Opening inner dropdown
 
 $('.menu_dropdown  .menu_dropdown_1 ul .menu_dropdown_item.open_inner_dropdown').click(function(){
     $(this).toggleClass('clicked');
 });
+
+
+
+// Day 22 / 5 / 24
 
 // google search input with dropdown
 
