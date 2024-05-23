@@ -9,6 +9,10 @@ body{
 
 /* buttons */
 
+button{
+    cursor: pointer;
+}
+
 .gray-btn{
     color: #fff;
     background-color: #aab2bd;
@@ -1247,3 +1251,10 @@ input.warning-input{
 /* Day 23 / 5 / 24 */
 
 /* Checkboxes and Radios */
+
+/* Default Checkbox */
+
+input.checkbox-input{
+    width: 20px;
+    height: 20px;
+}
