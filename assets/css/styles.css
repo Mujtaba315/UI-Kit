@@ -1525,6 +1525,10 @@ div.tabs div.button-tabs button.tabs-btn.mid-btn {
     border-right: solid 1px #ccd1d9;
 }
 
+div.tabs div.button-tabs button.tabs-btn img.tabs-dropdown-arrow{
+    margin: 0px 0px 1px 8px;
+}
+
 div.tabs p.tabs-text{
     color: #434a54;
     margin: 15px;
