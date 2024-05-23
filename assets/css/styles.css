@@ -1254,7 +1254,240 @@ input.warning-input{
 
 /* Default Checkbox */
 
-input.checkbox-input{
-    width: 20px;
+label.checkbox-container{
+    height: 18px;
+    width: max-content;
+    position: relative;
+    padding-left: 13px;
+    cursor: pointer;
+}
+
+label.checkbox-container input.checkbox-input{
+    width: 0;
+    height: 0;
+}
+
+label.checkbox-container span.checkbox-background{
+    height: 100%;
+    width: 18px;
+    background-color: #fff;
+    border: solid 1px #aab2bd;
+    position: absolute;
+    left: 0;
+}
+
+/* Adding hover effect on span checkbox */
+
+label.checkbox-container:hover input.checkbox-input ~ span.checkbox-background{
+    background-color: #dde1e7;
+}
+
+/* Changing background color of span when input checked */
+
+label.checkbox-container input.checkbox-input:checked ~ span.checkbox-background{
+    background-color: #3bafda;
+    border-color: #3bafda;
+}
+
+/* Creating the tick */
+
+label.checkbox-container span.checkbox-background:after{
+    content: "";
+    position: absolute;
+    border: solid #fff;
+    height: 10px;
+    width: 5px;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    left: 5.5px;
+    top: 1px;
+    display: none;
+}
+
+/* Making the tick visible when input checked */
+
+label.checkbox-container input.checkbox-input:checked ~ span.checkbox-background:after{
+    display: block;
+}
+
+/* Disabled checkbox */
+
+label.checkbox-container.margin-left{
+    margin-left: 20px;
+}
+
+label.checkbox-container input.checkbox-input:disabled:hover ~ span.checkbox-background{
+    background-color: #fff;
+    cursor: not-allowed;
+}
+
+
+/* Checked and disabled checkbox */
+
+label.checkbox-container input.checkbox-input:checked:disabled ~ span.checkbox-background{
+    background-color: #ccd1d9;
+    border-color: #ccd1d9;
+    cursor: not-allowed;
+}
+
+/* Default radio */
+
+label.radio-container{
+    position: relative;
     height: 20px;
+    padding-left: 13px;
+    cursor: pointer;
+}
+
+label.radio-container input.radio-input{
+    height: 0;
+    width: 0;
+}
+
+label.radio-container span.radio-background{
+    border: solid 1px #acb4be;
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+
+/* Adding border color when radio on to span */
+
+label.radio-container input.radio-input:checked ~ span.radio-background{
+    border-color: #3bafda;
+}
+
+/* Making the inner circle of radio */
+
+label.radio-container span.radio-background::after{
+    content: "";
+    position: absolute;
+    border: solid #3bafda;
+    border-radius: 50%;
+    border-width: 4px;
+    left: 5px;
+    top: 5px;
+    display: none;
+}
+
+/* Making the inner circle of radio visible when radio is on */
+
+label.radio-container input.radio-input:checked ~ span.radio-background::after{
+    display: block;
+}
+
+/* Disabled radio */
+
+label.radio-container.margin-left{
+    margin-left: 20px;
+}
+
+label.radio-container input.radio-input:disabled ~ span.radio-background{
+    border-color: #ccd1d9;
+    cursor: not-allowed;
+}
+
+/* Checked and disabled Radio */
+
+label.radio-container input.radio-input:checked:disabled ~ span.radio-background{
+    border-color: #ccd1d9;
+    cursor: not-allowed;
+}
+
+label.radio-container input.radio-input:checked:disabled ~ span.radio-background::after{
+    border-color: #ccd1d9;
+}
+
+/* Alerts */
+
+div.alert{
+    width: 460px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: left;
+    align-content: center;
+    position: relative;
+}
+
+div.alert p{
+    width: 460px;
+    padding-left: 4%;
+}
+
+div.alert p span.alert-heading{
+    font-weight: bolder;
+}
+
+div.alert img.cross-alert-img{
+    position: absolute;
+    top: 21px;
+    right: 4%;
+}
+
+/* warning alert */
+
+div.alert.warning{
+    background-color: #ffdd87;
+    color: #8a6d3b;
+}
+
+/* red alert */
+
+div.alert.red{
+    background-color: #f2838f;
+    color: #a94442;
+}
+
+/* big warning alert */
+
+div.alert.big-alert{
+    height: 160px;
+    align-content: flex-start;
+}
+
+div.alert.big-alert p.big-alert-heading{
+    margin: 15px 0 8px;
+}
+
+div.alert.big-alert p span.big-alert-heading{
+    font-size: 20px;
+}
+
+div.alert.big-alert p.big-alert-p{
+    width: 422px;
+    margin: 8px 0 9px;
+}
+
+div.alert.big-alert p.big-alert-p span.bold-and-underline{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.alert.big-alert button{
+    height: 34px;
+    width: 131px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 16px 0 4%;
+}
+
+div.alert.big-alert a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* big warning alert */
+
+div.alert.big-alert button.warning-btn{
+    background-color: #f6bb42;
+}
+
+/* big red alert */
+
+div.alert.big-alert button.red-btn{
+    background-color: #da4453;
 }

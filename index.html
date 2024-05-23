@@ -615,9 +615,110 @@
 
     <!-- Default checkbox -->
 
-    <input class="checkbox-input" type="checkbox" name="" id="">
-    <label for="">default</label>
+    <label class="checkbox-container">
+        <input class="checkbox-input" type="checkbox">
+        <span class="checkbox-background"></span>
+        default
+    </label>
 
+    <!-- Disabled checkbox -->
+
+    <label class="checkbox-container margin-left">
+        <input class="checkbox-input" type="checkbox" disabled>
+        <span class="checkbox-background"></span>
+        disabled
+    </label>
+
+    <!-- Checked checkbox -->
+
+    <label class="checkbox-container margin-left">
+        <input class="checkbox-input" type="checkbox" checked>
+        <span class="checkbox-background"></span>
+        checked
+    </label>
+
+    <!-- Checked and disabled checkbox -->
+
+    <label class="checkbox-container margin-left">
+        <input class="checkbox-input" type="checkbox" checked disabled>
+        <span class="checkbox-background"></span>
+        checked and disabled
+    </label>
+
+    <br><br>
+    <!-- Default Radio -->
+
+    <label class="radio-container">
+        <input class="radio-input" type="radio">
+        <span class="radio-background"></span>
+        default
+    </label>
+
+    <!-- Disabled Radio -->
+
+    <label class="radio-container margin-left">
+        <input class="radio-input" type="radio" disabled>
+        <span class="radio-background"></span>
+        disabled
+    </label>
+
+    <!-- Checked Radio -->
+
+    <label class="radio-container margin-left">
+        <input class="radio-input" type="radio" checked>
+        <span class="radio-background"></span>
+        checked
+    </label>
+
+    <!-- Checked and disabled Radio -->
+
+    <label class="radio-container margin-left">
+        <input class="radio-input" type="radio" checked disabled>
+        <span class="radio-background"></span>
+        checked and disabled
+    </label>
+    
+    <!-- Alerts -->
+
+    <br><br>
+    <h2>ALERTS:</h2>
+
+    <!-- warning alert -->
+
+    <div class="alert warning">
+        <p><span class="alert-heading">Warning!</span> Best check yourself, you're not looking too good.</p>
+        <img class="cross-alert-img" src="assets/images/warning cross rect.png" alt="">
+    </div>
+
+    <br>
+    <!-- red alert -->
+
+    <div class="alert red">
+        <p><span class="alert-heading">Oh snap!</span> Change few things up and try submitting.</p>
+        <img class="cross-alert-img" src="assets/images/red cross rect.png" alt="">
+    </div>
+
+    <br>
+    <!-- big warning alert -->
+
+    <div class="alert big-alert warning">
+        <p class="big-alert-heading"><span class="big-alert-heading alert-heading">Warning!</span></p>
+        <p class="big-alert-p">Change this and that and try again. <span class="bold-and-underline">Duis mollis,</span> est non commodo luctus, nisi erat porttitor ligula, eget lacina odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+        <img class="cross-alert-img" src="assets/images/warning cross rect.png" alt="">
+        <button class="warning-btn">Take this action</button>
+        <a href="">Or do this</a>
+    </div>
+
+    <br>
+    <!-- big red alert -->
+
+    <div class="alert big-alert red">
+        <p class="big-alert-heading"><span class="big-alert-heading alert-heading">Oh snap!</span></p>
+        <p class="big-alert-p">Change this and that and try again. <span class="bold-and-underline">Duis mollis,</span> est non commodo luctus, nisi erat porttitor ligula, eget lacina odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+        <img class="cross-alert-img" src="assets/images/red cross rect.png" alt="">
+        <button class="red-btn">Take this action</button>
+        <a href="">Or do this</a>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="assets/scripts/main.js"></script>
