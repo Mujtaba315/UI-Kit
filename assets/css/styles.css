@@ -1491,3 +1491,41 @@ div.alert.big-alert button.warning-btn{
 div.alert.big-alert button.red-btn{
     background-color: #da4453;
 }
+
+/* tabs */
+
+/* tab 1*/
+
+div.tabs{
+    height: 150px;
+    width: 461px;
+    box-shadow: 0px 1px 4px 0px #aab2bd, 0px 0px 1px 0px #aab2bd;
+    border-radius: 3px;
+    position: relative;
+}
+
+div.tabs div.button-tabs{
+    height: 40px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+}
+
+div.tabs div.button-tabs button.tabs-btn {
+    height: 100%;
+    width: 154px;
+    border: none;
+    color: #626363;
+    background-color: #e6e9ed;
+    padding: 0;
+}
+
+div.tabs div.button-tabs button.tabs-btn.mid-btn {
+    border-left: solid 1px #ccd1d9;
+    border-right: solid 1px #ccd1d9;
+}
+
+div.tabs p.tabs-text{
+    color: #434a54;
+    margin: 15px;
+}
