@@ -1181,6 +1181,10 @@ input.error-input{
     width: 73px;
 }
 
+.input-div.rounded-input-search input.rounded{
+    padding-right: 80px;
+}
+
 /* Warning Input */
 
 label.warning-label{
@@ -1233,6 +1237,10 @@ input.warning-input{
 
 .input-div .num-inc-dec .dec-btn{
     border-radius: 0 0 5px 0;
+}
+
+.input-div input.num-inc-dec-input{
+    padding-right: 25px;
 }
 
 
