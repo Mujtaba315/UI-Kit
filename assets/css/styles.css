@@ -1514,7 +1514,8 @@ div.tabs div.button-tabs{
     display: flex;
 }
 
-div.tabs div.button-tabs button.tabs-btn {
+div.tabs div.button-tabs button.tabs-btn,
+div.tabs div.button-tabs button.tabs-2-btn {
     height: 100%;
     width: 154px;
     border: none;
@@ -1523,26 +1524,31 @@ div.tabs div.button-tabs button.tabs-btn {
     padding: 0;
 }
 
-div.tabs div.button-tabs button.tabs-btn.mid-btn {
+div.tabs div.button-tabs button.tabs-btn.mid-btn,
+div.tabs div.button-tabs button.tabs-2-btn.mid-btn{
     border-left: solid 1px #ccd1d9;
     border-right: solid 1px #ccd1d9;
 }
 
-div.tabs div.button-tabs button.tabs-btn img.tabs-dropdown-arrow{
+div.tabs div.button-tabs button.tabs-btn img.tabs-dropdown-arrow,
+div.tabs div.button-tabs button.tabs-2-btn img.tabs-dropdown-arrow {
     margin: 0px 0px 1px 8px;
 }
 
-div.tabs p.tabs-text{
+div.tabs p.tabs-text,
+div.tabs p.tabs-2-text {
     color: #434a54;
     margin: 0;
     padding: 17px;
 }
 
-div.tabs div.button-tabs button.tabs-btn:hover{
+div.tabs div.button-tabs button.tabs-btn:hover, 
+div.tabs div.button-tabs button.tabs-2-btn:hover {
     background-color: #c9cccf;
 }
 
-div.tabs div.button-tabs button.tabs-btn.active{
+div.tabs div.button-tabs button.tabs-btn.active, 
+div.tabs div.button-tabs button.tabs-2-btn.active {
     background-color: #ffffff;
 }
 
@@ -1561,7 +1567,8 @@ div.tabs div.button-tabs button.tabs-btn.active{
     display: none;
 }
 
-.tabs .tab-dropdown.open{
+.tabs .tab-dropdown.open,
+.tabs .tab-2-dropdown.open {
     opacity: 1;
     display: block;
 }
@@ -1576,4 +1583,30 @@ div.tabs div.button-tabs button.tabs-btn.active{
 
 .tabs ul li:hover{
     background-color: #c9cccf;
+}
+
+/* tab 2 bottom */
+
+div.tabs div.button-tabs.button-tabs-2{
+    height: 40px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.tabs ul.tab-2-dropdown{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0px;
+    bottom: -35px;
+    width: 46px;
+    box-shadow: 0px 1px 4px 0px #aab2bd, 0px 0px 1px 0px #aab2bd;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    display: none;
 }

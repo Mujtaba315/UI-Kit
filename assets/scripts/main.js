@@ -133,3 +133,57 @@ $('.tab-dropdown-item').click(function(){
     // Displaying the text of clicked list item
     $('#' + $(this).attr('id') + '-text').css('display', 'block');
 });
+
+// Tab 2 bottom
+
+//hiding all the tab buttons texts
+$('.tab-2 .tabs-2-text').css('display', 'none');
+
+// Displaying the text of active tab button
+$('#' + $('.tab-2 .tabs-2-btn.active').attr('id') + '-text').css('display', 'block');
+
+// Adding click funtion to all tab buttons
+$('.tab-2 .tabs-2-btn').click(function(){
+
+    // Buttons other than dropdown
+    if (!($(this).attr('id') == "tab2-dropdown")){  
+
+        // Remove active effect from all tab buttons
+        $('.tab-2 .tabs-2-btn').removeClass('active');  
+
+        // Adding active effect to the clicked button
+        $(this).addClass('active');
+
+        // Again hiding all tab buttons text because active button text is visible
+        $('.tab-2 .tabs-2-text').css('display', 'none');
+
+        //Displaying the text of clicked button
+        $('#' + $(this).attr('id') + '-text').css('display', 'block');
+
+        // Closing the dropdown when clicked on tab buttons other than dropdown button
+        $('.tab-2 .tab-2-dropdown').removeClass('open');
+    
+    // Dropdown button
+    } else {
+
+        // Removing active effect from all buttons
+        $('.tab-2 .tabs-2-btn').removeClass('active');
+
+        // Adding active effect to the clicked button (i.e dropdown button)
+        $(this).addClass('active');
+
+        // Open / close dropdown
+        $('.tab-2 .tab-2-dropdown').toggleClass('open');
+    }
+});
+
+
+// Adding click function to all dropdown items
+$('.tab-2 .tab-2-dropdown-item').click(function(){
+
+    // Hiding all the tabs buttons text
+    $('.tab-2 .tabs-2-text').css('display', 'none');
+
+    // Displaying the text of clicked list item
+    $('#' + $(this).attr('id') + '-text').css('display', 'block');
+});
