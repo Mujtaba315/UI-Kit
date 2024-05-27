@@ -187,3 +187,140 @@ $('.tab-2 .tab-2-dropdown-item').click(function(){
     // Displaying the text of clicked list item
     $('#' + $(this).attr('id') + '-text').css('display', 'block');
 });
+
+
+// Day 27 / 5 / 24
+
+// Tab 3 left
+
+//hiding all the tab buttons texts
+$('.tab-3 .tabs-3-text').css('display', 'none');
+
+// Displaying the text of active tab button
+$('#' + $('.tab-3 .tabs-3-btn.active').attr('id') + '-text').css('display', 'block');
+
+// Adding click funtion to all tab buttons
+$('.tab-3 .tabs-3-btn').click(function(){
+
+    // Buttons other than dropdown
+    if (!($(this).attr('id') == "tab3-dropdown")){  
+
+        // Remove active effect from all tab buttons
+        $('.tab-3 .tabs-3-btn').removeClass('active');  
+
+        // Adding active effect to the clicked button
+        $(this).addClass('active');
+
+        // Again hiding all tab buttons text because active button text is visible
+        $('.tab-3 .tabs-3-text').css('display', 'none');
+
+        //Displaying the text of clicked button
+        $('#' + $(this).attr('id') + '-text').css('display', 'block');
+
+        // Closing the dropdown when clicked on tab buttons other than dropdown button
+        $('.tab-3 .tab-3-dropdown').removeClass('open');
+    
+    // Dropdown button
+    } else {
+
+        // Removing active effect from all buttons
+        $('.tab-3 .tabs-3-btn').removeClass('active');
+
+        // Adding active effect to the clicked button (i.e dropdown button)
+        $(this).addClass('active');
+
+        // Open / close dropdown
+        $('.tab-3 .tab-3-dropdown').toggleClass('open');
+    }
+});
+
+
+// Adding click function to all dropdown items
+$('.tab-3 .tab-3-dropdown-item').click(function(){
+
+    // Hiding all the tabs buttons text
+    $('.tab-3 .tabs-3-text').css('display', 'none');
+
+    // Displaying the text of clicked list item
+    $('#' + $(this).attr('id') + '-text').css('display', 'block');
+});
+
+// Tab 4 right
+
+//hiding all the tab buttons texts
+$('.tab-4 .tabs-4-text').css('display', 'none');
+
+// Displaying the text of active tab button
+$('#' + $('.tab-4 .tabs-4-btn.active').attr('id') + '-text').css('display', 'block');
+
+// Adding click funtion to all tab buttons
+$('.tab-4 .tabs-4-btn').click(function(){
+
+    // Buttons other than dropdown
+    if (!($(this).attr('id') == "tab4-dropdown")){  
+
+        // Remove active effect from all tab buttons
+        $('.tab-4 .tabs-4-btn').removeClass('active');  
+
+        // Adding active effect to the clicked button
+        $(this).addClass('active');
+
+        // Again hiding all tab buttons text because active button text is visible
+        $('.tab-4 .tabs-4-text').css('display', 'none');
+
+        //Displaying the text of clicked button
+        $('#' + $(this).attr('id') + '-text').css('display', 'block');
+
+        // Closing the dropdown when clicked on tab buttons other than dropdown button
+        $('.tab-4 .tab-4-dropdown').removeClass('open');
+    
+    // Dropdown button
+    } else {
+
+        // Removing active effect from all buttons
+        $('.tab-4 .tabs-4-btn').removeClass('active');
+
+        // Adding active effect to the clicked button (i.e dropdown button)
+        $(this).addClass('active');
+
+        // Open / close dropdown
+        $('.tab-4 .tab-4-dropdown').toggleClass('open');
+    }
+});
+
+
+// Adding click function to all dropdown items
+$('.tab-4 .tab-4-dropdown-item').click(function(){
+
+    // Hiding all the tabs buttons text
+    $('.tab-4 .tabs-4-text').css('display', 'none');
+
+    // Displaying the text of clicked list item
+    $('#' + $(this).attr('id') + '-text').css('display', 'block');
+});
+
+
+// Search navbar
+
+// Changing dropdown arrow on hover
+
+$('.navbar-left-content .navbar-dropdown').hover(
+    function()
+    {
+        $('.navbar-left-content .navbar-dropdown img').attr
+        ('src', 'assets/images/Arrow.png').css
+        ({'width': '8px', 'height': '4px'})
+    },
+
+    function()
+    {
+        $('.navbar-left-content .navbar-dropdown img').attr
+        ('src', 'assets/images/navbar dropdown arrow.png')
+    }
+);
+
+// Opening dropdown on click
+
+$('.search-navbar .navbar-left-content').click(function(){
+    $(this).toggleClass('open');
+});

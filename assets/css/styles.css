@@ -1543,12 +1543,16 @@ div.tabs p.tabs-2-text {
 }
 
 div.tabs div.button-tabs button.tabs-btn:hover, 
-div.tabs div.button-tabs button.tabs-2-btn:hover {
+div.tabs div.button-tabs button.tabs-2-btn:hover,
+div.tabs div.button-tabs button.tabs-3-btn:hover,
+div.tabs div.button-tabs button.tabs-4-btn:hover {
     background-color: #c9cccf;
 }
 
 div.tabs div.button-tabs button.tabs-btn.active, 
-div.tabs div.button-tabs button.tabs-2-btn.active {
+div.tabs div.button-tabs button.tabs-2-btn.active,
+div.tabs div.button-tabs button.tabs-3-btn.active,
+div.tabs div.button-tabs button.tabs-4-btn.active {
     background-color: #ffffff;
 }
 
@@ -1568,7 +1572,9 @@ div.tabs div.button-tabs button.tabs-2-btn.active {
 }
 
 .tabs .tab-dropdown.open,
-.tabs .tab-2-dropdown.open {
+.tabs .tab-2-dropdown.open,
+.tabs .tab-3-dropdown.open,
+.tabs .tab-4-dropdown.open {
     opacity: 1;
     display: block;
 }
@@ -1603,10 +1609,290 @@ div.tabs div.button-tabs.button-tabs-2{
     position: absolute;
     right: 0px;
     bottom: -35px;
-    width: 46px;
+    width: 120px;
     box-shadow: 0px 1px 4px 0px #aab2bd, 0px 0px 1px 0px #aab2bd;
     border-radius: 3px;
     opacity: 0;
     transition: all 0.3s ease-in-out;
     display: none;
+}
+
+/* Day 27 / 5 / 24 */
+
+/* tab 3 left */
+
+div.tab-3, 
+div.tab-4 {
+    height: 95px;
+}
+
+div.tabs div.button-tabs.button-tabs-3{
+    height: 100%;
+    width: 80px;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+}
+
+div.tabs div.button-tabs button.tabs-3-btn,
+div.tabs div.button-tabs button.tabs-4-btn {
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: #626363;
+    background-color: #e6e9ed;
+    padding: 0 0 0 10px;
+    text-align: left;
+}
+
+div.tabs div.button-tabs button.tabs-3-btn.mid-btn,
+div.tabs div.button-tabs button.tabs-4-btn.mid-btn {
+    border-top: solid 1px #ccd1d9;
+    border-bottom: solid 1px #ccd1d9;
+}
+
+
+div.tabs p.tabs-3-text {
+    color: #434a54;
+    margin: 0;
+    padding: 8px 17px 8px 98px;
+}
+
+.tabs ul.tab-3-dropdown{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0px;
+    bottom: -38px;
+    width: 70px;
+    box-shadow: 0px 1px 4px 0px #aab2bd, 0px 0px 1px 0px #aab2bd;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+.tab-3 ul li, 
+.tab-4 ul li {
+    padding-left: 10px;
+}
+
+/* tab 4 right */
+
+div.tabs div.button-tabs.button-tabs-4 {
+    height: 100%;
+    width: 80px;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+}
+
+div.tabs p.tabs-4-text {
+    color: #434a54;
+    margin: 0;
+    padding: 8px 98px 8px 17px;
+}
+
+.tabs ul.tab-4-dropdown {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0px;
+    bottom: -38px;
+    width: 70px;
+    box-shadow: 0px 1px 4px 0px #aab2bd, 0px 0px 1px 0px #aab2bd;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+
+/* search navbar */
+
+nav.search-navbar {
+    width: 100%;
+    height: 52px;
+    border-radius: 3px;
+    background-color: #37bc9b;
+    color: #26816a;
+    border: 1px solid #37bc9b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-navbar .navbar-left-content {
+    display: flex;
+    align-items: center;
+    min-width: 20%;
+    justify-content: space-around;
+    position: relative;
+}
+
+.navbar-left-content .navbar-heading{
+    padding: 0px 22px 0 16px;
+}
+
+.navbar-left-content .navbar-items{
+    padding: 17px 15px;
+    cursor: default;
+}
+
+.navbar-left-content .navbar-items:hover{
+    background-color: #48cfad;
+    color: #fff;
+}
+
+
+.navbar-items .navbar-dropdown-arrow {
+    margin-bottom: 3px;
+    margin-left: 1px;
+}
+
+.navbar-left-content ul{
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 16px;
+    background-color: #37bc9b;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px black;
+    text-align: center;
+    cursor: default;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navbar-left-content.open ul{
+    visibility: visible;
+    height: 54px;
+    opacity: 1;
+}
+
+
+.navbar-left-content ul li{
+    padding: 4px 24px;
+}
+
+.navbar-left-content ul li:hover{
+    background-color: #48cfad;
+    color: #fff;
+}
+
+.navbar-left-content ul li:active{
+    background-color: #48cfad;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.search-navbar .navbar-right-content{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-right-content img{
+    position: absolute;
+    left: 17px;
+}
+
+.navbar-right-content input{
+    width: 237px;
+    height: 34px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 0 12px 0 41px;
+    margin-right: 25px;
+}
+
+/* navbar 2 */
+
+nav.navbar-2{
+    width: 100%;
+    height: 52px;
+    border-radius: 3px;
+    background-color: #37bc9b;
+    color: #26816a;
+    border: 1px solid #37bc9b;
+    display: flex;
+}
+
+.navbar-2 .navbar-left-content {
+    display: flex;
+    align-items: center;
+}
+
+/* navbar 3 */
+
+nav.navbar-3{
+    width: 100%;
+    height: 52px;
+    border-radius: 3px;
+    background-color: #37bc9b;
+    color: #26816a;
+    border: 1px solid #37bc9b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-3 .navbar-left-content {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-3 .navbar-right-content {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-3 .navbar-right-content .navbar-items{
+    padding: 16px 25px;
+    cursor: default;
+}
+
+.navbar-3 .navbar-right-content .navbar-items:hover{
+    background-color: #48cfad;
+    color: #fff;
+}
+
+/* navbar 4 */
+
+nav.navbar-4{
+    width: 100%;
+    height: 52px;
+    border-radius: 3px;
+    background-color: #37bc9b;
+    color: #26816a;
+    border: 1px solid #37bc9b;
+    display: flex;
+}
+
+.navbar-4 .navbar-left-content {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-4 .navbar-left-content button {
+    width: 84px;
+    height: 34px;
+    color: #fff;
+    border: none;
+    background-color: #f6bb42;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.navbar-4 .navbar-left-content button:hover{
+    background-color: #cca453;
 }
