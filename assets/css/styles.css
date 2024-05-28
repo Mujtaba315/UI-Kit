@@ -2074,7 +2074,9 @@ div.breadcrumb-3 {
     background-color: transparent;
     color: #434a54;
     position: relative;
-    padding: 0 34px;
+    /* padding: 0 34px; */
+    padding-left: 19px;
+    padding-right: 5px;
     margin-left: -4px;
     display: inline-flex;
     align-items: center;
@@ -2088,7 +2090,7 @@ div.breadcrumb-3 {
 }
 
 
-.breadcrumb-1 .breadcrumb-1-btn.before-last::after,
+/* .breadcrumb-1 .breadcrumb-1-btn.before-last::after,
 .breadcrumb-3 .breadcrumb-3-btn.before-last::after {
     content: "";
     border: solid #2698c4;
@@ -2101,6 +2103,42 @@ div.breadcrumb-3 {
     right: -12.99px;
     z-index: 1;
     background-color: #3bafda;
+} */
+
+.breadcrumb-1 .breadcrumb-1-btn.before-last::after,
+.breadcrumb-3 .breadcrumb-3-btn.before-last::after {
+    content: "";
+    border: solid #2698c4;
+    height: 28.49px;
+    width: 9.49px;
+    border-width: 0px 0px 0px 1px;
+    transform: rotate(148deg);
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    z-index: 1;
+    background-color: #3bafda;
+    border-radius: 3px 0 0 0;
+}
+
+.breadcrumb-1 .breadcrumb-1-btn.before-last::before,
+.breadcrumb-3 .breadcrumb-3-btn.before-last::before {
+    content: "";
+    border: solid #2698c4;
+    height: 11.49px;
+    width: 26.49px;
+    border-width: 1px 0px 0px 0px;
+    transform: rotate(123deg);
+    display: inline-block;
+    position: absolute;
+    right: -14px;
+    /* bottom: 0px; */
+    /* left: 57px; */
+    top: 19px;
+    z-index: 1;
+    background-color: #3bafda;
+    border-radius: 3px 0 0 0;
 }
 
 /* breadcrumb 2 */
