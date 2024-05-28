@@ -16,11 +16,11 @@
 
 var dropdownBtns = document.querySelectorAll('.dropdown');
 // var dropdownMenu = document.querySelector('.dropdown-menu');
-for (let i=0; i<dropdownBtns.length; i++){
-//    console.log(dropdownBtns[i]);
+for (let i = 0; i < dropdownBtns.length; i++) {
+    //    console.log(dropdownBtns[i]);
     dropdownBtns[i].addEventListener('click', toggleMenu);
-    
-    function toggleMenu(){
+
+    function toggleMenu() {
         dropdownBtns[i].classList.toggle('open');
         // dropdownMenu.classList.toggle('open');
         // $(".dropdown-arrow").toggleClass('open');
@@ -35,18 +35,18 @@ for (let i=0; i<dropdownBtns.length; i++){
 
 var lineDropdownBtns = document.querySelectorAll('.line-dropdown');
 
-for (let i = 0; i<lineDropdownBtns.length; i++){
+for (let i = 0; i < lineDropdownBtns.length; i++) {
 
     lineDropdownBtns[i].addEventListener('click', toggleMenu);
 
-    function toggleMenu(){
+    function toggleMenu() {
         lineDropdownBtns[i].classList.toggle('open');
     }
 }
 
 // Turning hamburger lines into cross by adding clicked class to left
 
-$('.left').click(function(){
+$('.left').click(function () {
     $(this).toggleClass('clicked');
 });
 
@@ -56,7 +56,7 @@ $('.left').click(function(){
 
 // Opening inner dropdown
 
-$('.menu_dropdown  .menu_dropdown_1 ul .menu_dropdown_item.open_inner_dropdown').click(function(){
+$('.menu_dropdown  .menu_dropdown_1 ul .menu_dropdown_item.open_inner_dropdown').click(function () {
     $(this).toggleClass('clicked');
 });
 
@@ -66,13 +66,13 @@ $('.menu_dropdown  .menu_dropdown_1 ul .menu_dropdown_item.open_inner_dropdown')
 
 // google search input with dropdown
 
-$('.input-div.google-search.bbc ul li.bbc').click(function(){
+$('.input-div.google-search.bbc ul li.bbc').click(function () {
     $("input.google-search-input.blue-border.bbc").attr("value", $(this).html());
 });
 
 // 1 2 3 dropdown
 
-$('.input-div.google-search.123 ul li.123').click(function(){
+$('.input-div.google-search.123 ul li.123').click(function () {
     $("input.google-search-input.blue-border.123").attr("value", $(this).html());
 });
 
@@ -89,13 +89,13 @@ $('.tabs-text').css('display', 'none');
 $('#' + $('.tabs-btn.active').attr('id') + '-text').css('display', 'block');
 
 // Adding click funtion to all tab buttons
-$('.tabs-btn').click(function(){
+$('.tabs-btn').click(function () {
 
     // Buttons other than dropdown
-    if (!($(this).attr('id') == "tab1-dropdown")){  
+    if (!($(this).attr('id') == "tab1-dropdown")) {
 
         // Remove active effect from all tab buttons
-        $('.tabs-btn').removeClass('active');  
+        $('.tabs-btn').removeClass('active');
 
         // Adding active effect to the clicked button
         $(this).addClass('active');
@@ -108,8 +108,8 @@ $('.tabs-btn').click(function(){
 
         // Closing the dropdown when clicked on tab buttons other than dropdown button
         $('.tabs .tab-dropdown').removeClass('open');
-    
-    // Dropdown button
+
+        // Dropdown button
     } else {
 
         // Removing active effect from all buttons
@@ -125,7 +125,7 @@ $('.tabs-btn').click(function(){
 
 
 // Adding click function to all dropdown items
-$('.tab-dropdown-item').click(function(){
+$('.tab-dropdown-item').click(function () {
 
     // Hiding all the tabs buttons text
     $('.tabs-text').css('display', 'none');
@@ -143,13 +143,13 @@ $('.tab-2 .tabs-2-text').css('display', 'none');
 $('#' + $('.tab-2 .tabs-2-btn.active').attr('id') + '-text').css('display', 'block');
 
 // Adding click funtion to all tab buttons
-$('.tab-2 .tabs-2-btn').click(function(){
+$('.tab-2 .tabs-2-btn').click(function () {
 
     // Buttons other than dropdown
-    if (!($(this).attr('id') == "tab2-dropdown")){  
+    if (!($(this).attr('id') == "tab2-dropdown")) {
 
         // Remove active effect from all tab buttons
-        $('.tab-2 .tabs-2-btn').removeClass('active');  
+        $('.tab-2 .tabs-2-btn').removeClass('active');
 
         // Adding active effect to the clicked button
         $(this).addClass('active');
@@ -162,8 +162,8 @@ $('.tab-2 .tabs-2-btn').click(function(){
 
         // Closing the dropdown when clicked on tab buttons other than dropdown button
         $('.tab-2 .tab-2-dropdown').removeClass('open');
-    
-    // Dropdown button
+
+        // Dropdown button
     } else {
 
         // Removing active effect from all buttons
@@ -179,7 +179,7 @@ $('.tab-2 .tabs-2-btn').click(function(){
 
 
 // Adding click function to all dropdown items
-$('.tab-2 .tab-2-dropdown-item').click(function(){
+$('.tab-2 .tab-2-dropdown-item').click(function () {
 
     // Hiding all the tabs buttons text
     $('.tab-2 .tabs-2-text').css('display', 'none');
@@ -200,13 +200,13 @@ $('.tab-3 .tabs-3-text').css('display', 'none');
 $('#' + $('.tab-3 .tabs-3-btn.active').attr('id') + '-text').css('display', 'block');
 
 // Adding click funtion to all tab buttons
-$('.tab-3 .tabs-3-btn').click(function(){
+$('.tab-3 .tabs-3-btn').click(function () {
 
     // Buttons other than dropdown
-    if (!($(this).attr('id') == "tab3-dropdown")){  
+    if (!($(this).attr('id') == "tab3-dropdown")) {
 
         // Remove active effect from all tab buttons
-        $('.tab-3 .tabs-3-btn').removeClass('active');  
+        $('.tab-3 .tabs-3-btn').removeClass('active');
 
         // Adding active effect to the clicked button
         $(this).addClass('active');
@@ -219,8 +219,8 @@ $('.tab-3 .tabs-3-btn').click(function(){
 
         // Closing the dropdown when clicked on tab buttons other than dropdown button
         $('.tab-3 .tab-3-dropdown').removeClass('open');
-    
-    // Dropdown button
+
+        // Dropdown button
     } else {
 
         // Removing active effect from all buttons
@@ -236,7 +236,7 @@ $('.tab-3 .tabs-3-btn').click(function(){
 
 
 // Adding click function to all dropdown items
-$('.tab-3 .tab-3-dropdown-item').click(function(){
+$('.tab-3 .tab-3-dropdown-item').click(function () {
 
     // Hiding all the tabs buttons text
     $('.tab-3 .tabs-3-text').css('display', 'none');
@@ -254,13 +254,13 @@ $('.tab-4 .tabs-4-text').css('display', 'none');
 $('#' + $('.tab-4 .tabs-4-btn.active').attr('id') + '-text').css('display', 'block');
 
 // Adding click funtion to all tab buttons
-$('.tab-4 .tabs-4-btn').click(function(){
+$('.tab-4 .tabs-4-btn').click(function () {
 
     // Buttons other than dropdown
-    if (!($(this).attr('id') == "tab4-dropdown")){  
+    if (!($(this).attr('id') == "tab4-dropdown")) {
 
         // Remove active effect from all tab buttons
-        $('.tab-4 .tabs-4-btn').removeClass('active');  
+        $('.tab-4 .tabs-4-btn').removeClass('active');
 
         // Adding active effect to the clicked button
         $(this).addClass('active');
@@ -273,8 +273,8 @@ $('.tab-4 .tabs-4-btn').click(function(){
 
         // Closing the dropdown when clicked on tab buttons other than dropdown button
         $('.tab-4 .tab-4-dropdown').removeClass('open');
-    
-    // Dropdown button
+
+        // Dropdown button
     } else {
 
         // Removing active effect from all buttons
@@ -290,7 +290,7 @@ $('.tab-4 .tabs-4-btn').click(function(){
 
 
 // Adding click function to all dropdown items
-$('.tab-4 .tab-4-dropdown-item').click(function(){
+$('.tab-4 .tab-4-dropdown-item').click(function () {
 
     // Hiding all the tabs buttons text
     $('.tab-4 .tabs-4-text').css('display', 'none');
@@ -305,23 +305,21 @@ $('.tab-4 .tab-4-dropdown-item').click(function(){
 // Changing dropdown arrow on hover
 
 $('.navbar-left-content .navbar-dropdown').hover(
-    function()
-    {
+    function () {
         $('.navbar-left-content .navbar-dropdown img').attr
-        ('src', 'assets/images/Arrow.png').css
-        ({'width': '8px', 'height': '4px'})
+            ('src', 'assets/images/Arrow.png').css
+            ({ 'width': '8px', 'height': '4px' })
     },
 
-    function()
-    {
+    function () {
         $('.navbar-left-content .navbar-dropdown img').attr
-        ('src', 'assets/images/navbar dropdown arrow.png')
+            ('src', 'assets/images/navbar dropdown arrow.png')
     }
 );
 
 // Opening dropdown on click
 
-$('.search-navbar .navbar-left-content').click(function(){
+$('.search-navbar .navbar-left-content').click(function () {
     $(this).toggleClass('open');
 });
 
@@ -331,18 +329,18 @@ $('.search-navbar .navbar-left-content').click(function(){
 // Pill 2
 
 // Adding click event listner to all pill buttons
-$('.pill-2 .pill-btn').click(function(){
+$('.pill-2 .pill-btn').click(function () {
 
     // Remove bydefault active button effect
     $('.pill-2 .pill-btn').removeClass('active');
 
     // Checking if clicked button is dropdown?
-    if ($(this).hasClass('pill-dropdown-btn')){
+    if ($(this).hasClass('pill-dropdown-btn')) {
 
         // Adding active class for effect and open class to open dropdown
         $(this).toggleClass('active open');
 
-    // Only for button other than dropdown
+        // Only for button other than dropdown
     } else {
 
         // Adding active effect to clicked button
@@ -355,13 +353,56 @@ $('.pill-2 .pill-btn').click(function(){
     // Changing dropdown image when dropdown button get clicked
     $('.pill-btn.active .pill-dropdown-arrow').attr(
         'src', 'assets/images/Arrow.png'
-        ).css(
-        {'width': '8px', 'height': '4px'}
-        );
+    ).css(
+        { 'width': '8px', 'height': '4px' }
+    );
 
     // Changing image back to original when active class reomved from dropdown button
     $('.pill-btn:not(.active) .pill-dropdown-arrow').attr(
         'src', 'assets/images/pill dropdown arrow.png'
-        );
+    );
 });
 
+
+// Progress 60%
+
+var n = $('.progresses .progress-60').attr('data-id');
+$('.progresses .progress-60').css('width', n + '%').html(n);
+
+
+$('.progress-60').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+
+// $('.progresses .progress-60').html(n + '%');
+
+
+// for (let i = 1; i <= n; i++) {
+//     $('.progresses .progress-60').css('width', i + '%').html(i + '%');
+// }
+
+// $(".progresses .progress-60").each(function () {
+//       $(this)
+//         .prop("Counter", 0)
+//         .animate(
+//           {
+//             Counter: $(this).text(),
+//           },
+//           {
+//             duration: 4000,
+//             easing:"swing",
+//             step:function (now) {
+//               now = Number(Math.ceil(now)).toLocaleString('en');
+//                                 $(this).text(now);
+//             },
+//           }
+//         );
+//     }); 

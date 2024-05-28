@@ -2175,3 +2175,22 @@ div.breadcrumb-3 {
 .breadcrumb-3 .breadcrumb-3-btn .breadcrumb-3-image{
     margin-right: 5px;
 }
+
+/* progresses */
+
+div.progresses {
+    width: 100%;
+    height: 21px;
+    background-color: #e6e9ed;
+    border-radius: 3px;
+}
+
+.progresses .progress-60 {
+    /* width: 60%; */
+    width: 0;
+    background-color: #3bafda;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    transition: all 2s;
+}
