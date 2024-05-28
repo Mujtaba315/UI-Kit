@@ -324,3 +324,44 @@ $('.navbar-left-content .navbar-dropdown').hover(
 $('.search-navbar .navbar-left-content').click(function(){
     $(this).toggleClass('open');
 });
+
+
+// Day 28 / 05 / 2024
+
+// Pill 2
+
+// Adding click event listner to all pill buttons
+$('.pill-2 .pill-btn').click(function(){
+
+    // Remove bydefault active button effect
+    $('.pill-2 .pill-btn').removeClass('active');
+
+    // Checking if clicked button is dropdown?
+    if ($(this).hasClass('pill-dropdown-btn')){
+
+        // Adding active class for effect and open class to open dropdown
+        $(this).toggleClass('active open');
+
+    // Only for button other than dropdown
+    } else {
+
+        // Adding active effect to clicked button
+        $(this).toggleClass('active');
+
+        // Removing open class from dropdown button
+        $('.pill-dropdown-btn').removeClass('open');
+    }
+
+    // Changing dropdown image when dropdown button get clicked
+    $('.pill-btn.active .pill-dropdown-arrow').attr(
+        'src', 'assets/images/Arrow.png'
+        ).css(
+        {'width': '8px', 'height': '4px'}
+        );
+
+    // Changing image back to original when active class reomved from dropdown button
+    $('.pill-btn:not(.active) .pill-dropdown-arrow').attr(
+        'src', 'assets/images/pill dropdown arrow.png'
+        );
+});
+

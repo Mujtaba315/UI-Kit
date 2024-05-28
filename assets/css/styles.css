@@ -1924,3 +1924,216 @@ div.pill-1 .pill-num{
 .pill-item{
     margin: 0 20px;
 }
+
+/* Day 28 / 5 / 24 */
+
+/* pill 2 */
+
+div.pill-2 {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #f1f2f6;
+    display: flex;
+}
+
+.pill-2 .pill-btn {
+    border: none;
+    width: 33.333%;
+    color: #3bafda;
+    border-radius: 3px;
+    position: relative;
+}
+
+
+.pill-btn .pill-num {
+    width: 28px;
+    height: 17px;
+    background-color: #da4453;
+    color: #ffffff;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.pill-2 .pill-btn.active {
+    background-color: #3bafda;
+    color: #fff;
+}
+
+.pill-btn.active .pill-num {
+    background-color: #ffffff;
+    color: #3bafda;
+}
+
+.pill-btn .pill-dropdown-arrow {
+    margin-bottom: 1px;
+}
+
+.pill-btn ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #3bafda;
+    box-shadow: 0px 1px 3px 0px black;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    border-radius: 3px;
+    /* transform: scale(0);
+    transform-origin: top; */
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.pill-btn.active.open ul{
+    /* transform: scale(1); */
+    visibility: visible;
+    opacity: 1;
+    height: 42px;
+}
+
+.pill-btn ul li {
+    padding: 3px 0;
+}
+
+.pill-btn ul li:hover {
+    background-color: #63bbdb;
+}
+
+.pill-btn ul li:active {
+    background-color: #63bbdb;
+    text-decoration: underline;
+}
+
+/* pill 3 */
+
+div.pill-3 {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #f1f2f6;
+    color: #3bafda;
+    align-content: center;
+}
+
+div.pill-3 span {
+    margin-left: 20px;
+}
+
+/* pill 4 */
+
+div.pill-4 {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #f1f2f6;
+    color: #3bafda;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pill-4 .pill-4-items {
+    margin: 0 20px;
+}
+
+.pill-4 .pill-4-items.pill-4-num {
+    width: 28px;
+    height: 17px;
+    background-color: #da4453;
+    color: #ffffff;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-block;
+} 
+
+/* breadcrumb 1 */
+
+div.breadcrumb-1,
+div.breadcrumb-2,
+div.breadcrumb-3 {
+    width: 100%;
+    height: 36px;
+    border-radius: 3px;
+    background-color: #e6e9ed;
+    align-content: center;
+    overflow: hidden;
+} 
+
+.breadcrumb-1 .breadcrumb-1-btn,
+.breadcrumb-3 .breadcrumb-3-btn {
+    border: none;
+    background-color: transparent;
+    color: #434a54;
+    position: relative;
+    padding: 0 34px;
+    margin-left: -4px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.breadcrumb-1 .breadcrumb-1-btn.before-last,
+.breadcrumb-3 .breadcrumb-3-btn.before-last {
+    background-color: #3bafda;
+    color: #fff;
+}
+
+
+.breadcrumb-1 .breadcrumb-1-btn.before-last::after,
+.breadcrumb-3 .breadcrumb-3-btn.before-last::after {
+    content: "";
+    border: solid #2698c4;
+    height: 25.49px;
+    width: 25.49px;
+    border-width: 1px 0px 0px 1px;
+    transform: rotate(135deg);
+    display: inline-block;
+    position: absolute;
+    right: -12.99px;
+    z-index: 1;
+    background-color: #3bafda;
+}
+
+/* breadcrumb 2 */
+
+.breadcrumb-2 .breadcrumb-2-btn {
+    border: none;
+    background-color: transparent;
+    color: #434a54;
+    position: relative;
+    padding-left: 15px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.breadcrumb-2 .breadcrumb-2-btn.before-last {
+    color: #3bafda;
+}
+
+.breadcrumb-2 .breadcrumb-2-btn.before-last::after {
+    content: "";
+    border: solid #d0d5dc;
+    width: 12px;
+    border-width: 1px 0px 0px 0px;
+    transform: rotate(112deg);
+    display: inline-block;
+    position: absolute;
+    right: -12.99px;
+    z-index: 1;
+}
+
+/* breadcrumb 3 */
+
+.breadcrumb-3 .breadcrumb-3-btn .breadcrumb-3-image{
+    margin-right: 5px;
+}
