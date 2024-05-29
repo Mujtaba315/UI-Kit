@@ -401,4 +401,47 @@ $('.progress-60').each(function () {
 //     });
 // });
 
+
+
+
 // 29 / 05 / 2024
+
+// Pattern progress bar
+
+let percentage = $('.pattern-progress-bar .pattern-progress-80').attr('data-id');
+$('.pattern-progress-bar .pattern-progress-80').css({'width':percentage + '%'});
+
+
+// Pagination
+
+$('.pagination .pages').click(function(){
+    $('.pagination .pages').removeClass('click').css('border-right', '1px solid #ccd1d9');
+    if ( $(this).hasClass('1st-page') ){
+        $(this).addClass('click');
+    } else {
+        $(this).addClass('click').prev().css({'border-right':'1px solid #8cc152', 'width':'28.42px'});
+    }
+});
+
+
+// Pagers 
+
+$('.pagers .pager-btn').click(function(){
+    $('.pagers .pager-btn').removeClass('active');
+    $(this).addClass('active');
+});
+
+
+//  Accordions
+
+$('.accordions .accordion-item').click(function(){
+    $(this).toggleClass('active');
+});
+
+
+//  White Accordions
+
+$('.white-accordions .white-accordion-item').click(function(){
+    $('.white-accordions .white-accordion-item').removeClass('active');
+    $(this).addClass('active');
+});
