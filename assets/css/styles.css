@@ -2195,3 +2195,12 @@ div.progresses {
     transition: all 2s;
     border-radius: 3px;
 }
+
+.progresses .progress-60::after{
+    content: "%";
+}
+
+
+/* Day 29 / 5 / 24 */
+
+/* Pattern progress bar */

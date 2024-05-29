@@ -369,7 +369,6 @@ $('.pill-2 .pill-btn').click(function () {
 var n = $('.progresses .progress-60').attr('data-id');
 $('.progresses .progress-60').css('width', n + '%').html(n);
 
-
 $('.progress-60').each(function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
@@ -382,27 +381,24 @@ $('.progress-60').each(function () {
     });
 });
 
-// $('.progresses .progress-60').html(n + '%');
 
-
-// for (let i = 1; i <= n; i++) {
-//     $('.progresses .progress-60').css('width', i + '%').html(i + '%');
-// }
-
-// $(".progresses .progress-60").each(function () {
-//       $(this)
-//         .prop("Counter", 0)
-//         .animate(
-//           {
-//             Counter: $(this).text(),
-//           },
-//           {
-//             duration: 4000,
-//             easing:"swing",
-//             step:function (now) {
-//               now = Number(Math.ceil(now)).toLocaleString('en');
-//                                 $(this).text(now);
-//             },
+// $('.progress-60').each(function () {
+//     var thisElement = $(this);
+//     $(this).prop('Counter',0).animate({
+//         Counter: $(this).text()
+//     }, {
+//         duration: 2000,
+//         easing: 'swing',
+//         step: function (now) {
+//             $(this).text(Math.ceil(now));
+//             var mathCount = Math.ceil(this.Counter);
+//             thisElement.text(mathCount);
+//         },
+//         complete: function() {
+//             var mathCount = this.Counter > 0 ? n + '%' : this.Counter;
+//             thisElement.text(mathCount);
 //           }
-//         );
-//     }); 
+//     });
+// });
+
+// 29 / 05 / 2024
