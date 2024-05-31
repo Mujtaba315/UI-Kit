@@ -2624,3 +2624,10 @@ div.jumbotron-2 {
 .jumbotron-2 .slick-next:before {
     content: url(../images/jumbotron_2_next_btn.png);
 }
+
+/* Cards */
+
+div.cards {
+    width: 220px;
+    height: 360px;
+}
