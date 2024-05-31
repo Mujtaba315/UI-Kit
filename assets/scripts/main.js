@@ -419,7 +419,7 @@ $('.pagination .pages').click(function(){
     if ( $(this).hasClass('1st-page') ){
         $(this).addClass('click');
     } else {
-        $(this).addClass('click').prev().css({'border-right':'1px solid #8cc152', 'width':'28.42px'});
+        $(this).addClass('click').prev().css({'border-right':'none', 'width':'28.42px'});
     }
 });
 
@@ -434,14 +434,124 @@ $('.pagers .pager-btn').click(function(){
 
 //  Accordions
 
+let accordion_item1_flag = true;
+let accordion_item2_flag = false;
+let accordion_item3_flag = false;
+
 $('.accordions .accordion-item').click(function(){
-    $(this).toggleClass('active');
+    
+    if ($(this).attr("id") == "accordion1-item1"){
+        
+        if (accordion_item1_flag == false){
+            $('.accordions .accordion-item').removeClass('active');
+            $(this).addClass('active');
+            accordion_item1_flag = true;
+            accordion_item2_flag = false; 
+            accordion_item3_flag = false;
+            
+        } else {
+            $('.accordions .accordion-item').removeClass('active');
+            accordion_item1_flag = false;        
+        }
+    }
+
+    else if ($(this).attr("id") == "accordion1-item2"){
+        
+        if (accordion_item2_flag == false){
+            $('.accordions .accordion-item').removeClass('active');
+            $(this).addClass('active');
+            accordion_item2_flag = true;
+            accordion_item1_flag = false; 
+            accordion_item3_flag = false;
+            
+        } else {
+            $('.accordions .accordion-item').removeClass('active');
+            accordion_item2_flag = false;  
+        }
+    }
+
+    else if ($(this).attr("id") == "accordion1-item3"){
+        
+        if (accordion_item3_flag == false){
+            $('.accordions .accordion-item').removeClass('active');
+            $(this).addClass('active');
+            accordion_item3_flag = true;
+            accordion_item1_flag = false; 
+            accordion_item2_flag = false;
+            
+        } else {
+            $('.accordions .accordion-item').removeClass('active');
+            accordion_item3_flag = false;   
+        }
+    }
 });
 
 
 //  White Accordions
 
+let white_accordion_item1_flag = true;
+let white_accordion_item2_flag = false;
+let white_accordion_item3_flag = false;
+
 $('.white-accordions .white-accordion-item').click(function(){
-    $('.white-accordions .white-accordion-item').removeClass('active');
-    $(this).addClass('active');
+
+    if ($(this).attr("id") == "white-accordion-item1"){
+        
+        if (white_accordion_item1_flag == false){
+            $('.white-accordions .white-accordion-item').removeClass('active');
+            $(this).addClass('active');
+            white_accordion_item1_flag = true;
+            white_accordion_item2_flag = false; 
+            white_accordion_item3_flag = false;
+            
+        } else {
+            $('.white-accordions .white-accordion-item').removeClass('active');
+            white_accordion_item1_flag = false;        
+        }
+    }
+
+    else if ($(this).attr("id") == "white-accordion-item2"){
+        
+        if (white_accordion_item2_flag == false){
+            $('.white-accordions .white-accordion-item').removeClass('active');
+            $(this).addClass('active');
+            white_accordion_item2_flag = true;
+            white_accordion_item1_flag = false; 
+            white_accordion_item3_flag = false;
+            
+        } else {
+            $('.white-accordions .white-accordion-item').removeClass('active');
+            white_accordion_item2_flag = false;  
+        }
+    }
+
+    else if ($(this).attr("id") == "white-accordion-item3"){
+        
+        if (white_accordion_item3_flag == false){
+            $('.white-accordions .white-accordion-item').removeClass('active');
+            $(this).addClass('active');
+            white_accordion_item3_flag = true;
+            white_accordion_item1_flag = false; 
+            white_accordion_item2_flag = false;
+            
+        } else {
+            $('.white-accordions .white-accordion-item').removeClass('active');
+            white_accordion_item3_flag = false;   
+        }
+    }
+});
+
+// Day 31 / 5 / 24 
+
+// Lists
+
+$('ul.ui-list li').click(function(){
+    $('ul.ui-list li').removeClass('click');
+    $(this).toggleClass('click');
+});
+
+// Jumbotrons
+
+$('.single-item').slick({
+    dots: true
 });

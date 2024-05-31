@@ -1,10 +1,12 @@
 
 /* Day 17 / 5 / 24 */
 
-/* buttons */
+/* Font face for slick slider */
+@font-face { font-family: slick; src: url('../fonts/slick.ttf'); } 
 
 body{
     background-color: #f1f2f6;
+    padding-bottom: 30px;
 }
 
 /* buttons */
@@ -2344,29 +2346,35 @@ div.pagers {
 
 /* Accordions */
 
+.accordions {
+    width: 100%;
+}
+
 .accordions .item-title {
     color: #434a54;
     font-size: 16px;
     padding: 10px;
     cursor: pointer;
     background-color: #f1f2f6;
+    width: 100%;
 }
 
 .accordions .item-text {
-    padding: 10px;
     color: #434a54;
     font-size: 13px;
     opacity: 0;
-    height: 0;
-    /* display: none; */
+    max-height: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
+    width: 100%;
+    /* display: none; */
 }
 
 .accordion-item.active .item-text{
     visibility: visible;
     opacity: 1;
-    height: 80px;
+    max-height: 10rem;
+    padding: 10px;
     /* display: block; */
 }
 
@@ -2374,12 +2382,10 @@ div.pagers {
 
 .white-accordions {
     background-color: #ffffff;
+    border: 1px solid #e8e9ec;
+    border-top: none;
     border-radius: 5px;
     overflow: hidden;
-}
-
-.white-accordions hr{
-    color: #e6e9ed;
 }
 
 .white-accordions .item-title {
@@ -2387,22 +2393,234 @@ div.pagers {
     font-size: 16px;
     padding: 10px;
     cursor: pointer;
+    border-bottom: 1px solid #e8e9ec;
+}
+
+.white-accordions #white-accordion-item3 .item-title {
+    border-bottom: none ;
+}
+
+.white-accordions #white-accordion-item3 .item-text {
+    border-bottom: none;
+    border-top: 1px solid #e8e9ec;
 }
 
 .white-accordions .item-text {
-    padding: 10px;
     color: #434a54;
     font-size: 13px;
     opacity: 0;
-    height: 0;
-    /* display: none; */
+    max-height: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid #e8e9ec;
+    /* display: none; */
 }
 
 .white-accordion-item.active .item-text{
     visibility: visible;
     opacity: 1;
-    height: 80px;
+    max-height: 10rem;
+    padding: 10px;
     /* display: block; */
+}
+
+
+/* Day 31 / 5 / 24  */
+
+/* Lists */
+
+ul.ui-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #e8e9ec;
+    border-top: none;
+    width: 100%;
+}
+
+ul.ui-list li {
+    padding: 10px;
+    border-bottom: 1px solid #e8e9ec;
+    display: flex;
+    justify-content: space-between;
+    color: #434a54;
+}
+
+ul.ui-list li span {
+    width: max-content;
+    padding: 0 6px;
+    height: 17px;
+    color: #ffffff;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+ul.ui-list li span.second-item-span {
+    border: 1px solid #aab2bd;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #434a54;
+}
+
+ul.ui-list li.last-item {
+    border-bottom: 1px solid #d4d5d8;
+}
+
+ul.ui-list li:hover {
+    background-color: #7dd0ee;
+    border-color: #7dd0ee;
+}
+
+ul.ui-list li:hover span {
+    background-color: #fff !important;
+    border-color: #fff;
+    color: #4fc1e9;
+}
+
+ul.ui-list li.click {
+    background-color: #4fc1e9;
+    border-color: #4fc1e9;
+}
+
+ul.ui-list li.click span {
+    background-color: #fff !important;
+    border-color: #fff;
+    color: #4fc1e9;
+}
+
+/* List 2 */
+
+ul.list2 li{
+    display: block;
+}
+
+ul.list2 li.first-item {
+    border-radius: 4px 4px 0 0;
+}
+
+ul.list2 li.last-item {
+    border-radius: 0 0 4px 4px;
+}
+
+ul.list2 h3 {
+    margin: 0 0 5px 0;
+}
+
+ul.list2 li:hover {
+    color: #fff;
+}
+
+ul.list2 li.click {
+    color: #fff;
+}
+
+/* Jumbotrons */
+
+div.jumbotrons {
+    display: flex;
+    align-items: center;
+    column-gap: 23px;
+}
+
+div.jumbotron-1,
+div.jumbotron-2 {
+    max-width: 460px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #e8e9ec;
+    border-top: none;
+}
+
+/* .jumbotron-1 .jumbotron-img,
+.jumbotron-2 .jumbotron-img {
+    max-height: 46%;
+} */
+
+.jumbotron-1 .jumbotron-img img,
+.jumbotron-2 .jumbotron-img img {
+    max-width: 100%;
+    border-radius: 4px 4px 0 0;
+    height: 276px;
+}
+
+.jumbotron-1 .jumbotron-text,
+.jumbotron-2 .jumbotron-text {
+    padding: 1px 30px 15px;
+    color: #434a54;
+    border-bottom: 1px solid #d4d5d8;
+    border-radius: 0 0 2px 2px;
+    max-width: 100%;
+}
+
+.jumbotron-1 .jumbotron-text h3,
+.jumbotron-2 .jumbotron-text h3 {
+    font-size: 26px;
+    margin: 17px 0 0;
+}
+
+.jumbotron-1 .jumbotron-text h4,
+.jumbotron-2 .jumbotron-text h4 {
+    margin-bottom: 5px;
+    font-size: 20px;
+} 
+
+.jumbotron-1 .jumbotron-text p,
+.jumbotron-2 .jumbotron-text p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+/* Jumbotron 2 */
+
+.jumbotron-2 .slick-prev {
+    left: 13px;
+    z-index: 1;
+}
+
+.jumbotron-2 .slick-next {
+    right: 13px;
+}
+
+.jumbotron-2 .slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.jumbotron-2 .slick-dots {
+    bottom: 16px;
+}
+
+.jumbotron-2 .slick-dots li{
+    margin: 0 -2px;
+}
+
+.jumbotron-2 .slick-dots li button::before{
+    font-size: 8px;
+    opacity: 1;
+}
+
+.jumbotron-2 .slick-dots li button:before {
+    color: transparent;
+    border: 1px solid white;
+    position: relative;
+    border-radius: 100%;
+}
+
+
+.jumbotron-2 .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: white;
+    background-color: #fff;
+}
+
+.jumbotron-2 .slick-prev:before {
+    content: url(../images/jumbotron_2_prev_btn.png);
+}
+
+.jumbotron-2 .slick-next:before {
+    content: url(../images/jumbotron_2_next_btn.png);
 }
