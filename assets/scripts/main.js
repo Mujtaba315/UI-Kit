@@ -555,3 +555,57 @@ $('ul.ui-list li').click(function(){
 $('.single-item').slick({
     dots: true
 });
+
+
+// 3 / 6/ 24
+
+// Modal
+
+$('.modal-cross-img').click(function(){
+    $('.modal-border-bottom').addClass('closed');
+});
+
+$('.open-modal-btn').click(function(){
+    $('.modal-border-bottom').removeClass('closed');
+});
+
+
+// panel accordion
+
+// const accordionBtns = document.querySelectorAll(".accordion-panel-content");
+
+// accordionBtns.forEach((accordion) => {
+//   accordion.onclick = function () {
+//     //this.classList.toggle("is-open");
+
+//     if (this.style.maxHeight) {
+//       //this is if the accordion is open
+//       this.style.maxHeight = null;
+//     } else {
+//       //if the accordion is currently closed
+//       this.style.maxHeight = this.scrollHeight + "px";
+      
+//     }
+//   };
+// });
+
+
+const accordionBtns = document.querySelectorAll(".accordion-panel-title");
+
+accordionBtns.forEach((accordion) => {
+  accordion.onclick = function () {
+    this.classList.toggle("active");
+
+    let content = this.nextElementSibling;
+
+    if (content.style.maxHeight) {
+      //this is if the accordion is open
+      content.style.maxHeight = null;
+    } else {
+      //if the accordion is currently closed
+      let hnum = content.scrollHeight;
+      content.style.maxHeight = hnum + "px";
+      console.log(content.style.maxHeight);
+    }
+  };
+});
