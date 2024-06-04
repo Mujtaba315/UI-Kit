@@ -6,7 +6,7 @@
 
 body{
     background-color: #f1f2f6;
-    padding-bottom: 30px;
+    padding-bottom: 100px;
 }
 
 /* buttons */
@@ -2954,7 +2954,7 @@ div.panel {
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
     border-bottom: 1px solid #e6e9ed;
-    padding: 0px 15px;
+    padding: 0 15px;
 }
 
 /* .panel .accordion-panel-title.active ~ .accordion-panel-content {
@@ -2964,3 +2964,372 @@ div.panel {
 .panel .accordion-panel-content.last-content {
     border-bottom: none;
 } 
+
+
+/* Day 4 / 6 / 24 */
+
+/* panel with images */
+
+div.image-panel {
+    width: 100%;
+    display: flex;
+    column-gap: 11px;
+    margin-top: 5px;
+}
+
+.image-panel .panel-image {
+    width: max-content;
+}
+
+.image-panel .panel-text h5 {
+    color: #333333;
+    margin: 0 0 2px;
+}
+
+
+.image-panel .panel-text p {
+    color: #afb7c1;
+    margin: 0 0 14px;
+}
+
+div.nested-panel-1,
+div.nested-panel-3 {
+    margin-left: 75px;
+}
+
+div.nested-panel-2 {
+    margin-left: 150px;
+}
+
+div.image-panel.last-panel {
+    justify-content: space-between;
+} 
+
+/* footer */
+
+div.footer {
+    width: 100%;
+    background-color: #434a54;
+    color: #aab2bd;
+    font-family: sans-serif;
+    padding: 45px 0 35px;
+}
+
+.footer .footer-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer .footer-header .flex-item {
+    /* width: 18.75%; */
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+.footer .footer-header .footer-logo {
+    /* position: relative;
+    width: 25%; */
+    flex-grow: 1;
+}
+
+.footer .footer-header .footer-logo img {
+    padding: 0px 7px 0px 15px;
+    margin: -7px 0 0;
+}
+
+.footer .footer-header span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: -10px;
+}
+
+.footer .footer-header h5 {
+    color: #fff;
+    font-size: 13px;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.footer .footer-header a {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer .footer-footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Typography */
+
+div.typography {
+    color: #434a54;
+}
+
+.typography h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.typography h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.typography h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.typography h4{
+    font-size: 19px;
+    font-weight: bold;
+}
+.typography h5{
+    font-size: 18px;
+    font-weight: bold;
+}
+.typography h6{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.typography p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.typography .typography-img {
+    width: 100%;
+    height: auto;
+}
+
+.typography p.lead-text{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.typography div.quote {
+    padding: 10px 0 10px 20px;
+    border-left: 4px solid #ccd1d9;
+}
+
+.typography .quote p.lead-text {
+    margin: 0 0 15px;
+}
+
+.typography .quote p.quote-sub {
+    color: #999999;
+    margin: 0;
+}
+
+.typography small{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/* pricing card green */
+
+div.pricing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.pricing-card {
+    max-width: 254px;
+    box-shadow: 0px 1px 4px 0px #b8babe, 0px 0px 1px 0px #b8babe;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+div.pricing-card h5,
+div.pricing-card p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pricing-card .pricing-card-header {
+    background-color: #a0d468;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    border-radius: 4px 4px 0 0;
+}
+
+.pricing-card .pricing-card-header h5 {
+    margin: 35px 0 5px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.pricing-card .pricing-card-header p {
+    margin: 1px 0 28px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pricing-card .pricing-card-detail {
+    color: #434a54;
+    background-color: #ebf6df;
+    text-align: center;
+    align-content: center;
+}
+
+.pricing-card .pricing-card-detail h5 {
+    font-size: 19px;
+    font-weight: 400;
+    margin: 17px 0 8px;
+}
+
+.pricing-card .pricing-card-detail img {
+    margin: 8px 0;
+}
+
+.pricing-card .pricing-card-detail p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 8px 0 8px;
+}
+.pricing-card .pricing-card-detail p.last-detail {
+    margin-bottom: 17px;
+}
+
+.pricing-card .pricing-card-footer {
+    background-color: #e6e9ed;
+    text-align: center;
+    align-content: center;
+    border-radius: 0 0 4px 4px;
+    padding: 20.5px 0;
+}
+
+.pricing-card .pricing-card-footer .pricing-card-btn {
+    border: none;
+    color: #fff;
+    width: 85px;
+    height: 34px;
+    border-radius: 4px;
+    background-color: #8cc152;
+}
+
+/* pricing card blue */
+
+.pricing-card.blue {
+    position: relative;
+    top: 13px;
+    z-index: -1;
+    left: 20px;
+    box-shadow: none;
+}
+
+.pricing-card.blue .pricing-card-header {
+    background-color: #4fc1e9;
+}
+
+.pricing-card.blue .pricing-card-header h5 {
+    margin: 20px 0 5px;
+}
+
+.pricing-card.blue .pricing-card-header p {
+    margin: 1px 0 20px;
+}
+
+.pricing-card.blue .pricing-card-detail {
+ background-color: #d7f1fa;
+}
+
+.pricing-card.blue .pricing-card-footer .pricing-card-btn {
+    background-color: #3bafda;
+}
+
+
+/* pricing card yellow */
+
+.pricing-card.yellow {
+    position: relative;
+    top: 13px;
+    z-index: -1;
+    right: 20px;
+    box-shadow: none;
+}
+
+.pricing-card.yellow .pricing-card-header {
+    background-color: #ffce54;
+}
+
+.pricing-card.yellow .pricing-card-header h5 {
+    margin: 20px 0 5px;
+}
+
+.pricing-card.yellow .pricing-card-header p {
+    margin: 1px 0 20px;
+}
+
+.pricing-card.yellow .pricing-card-detail {
+ background-color: #fffaed;
+}
+
+.pricing-card.yellow .pricing-card-footer .pricing-card-btn {
+    background-color: #f6bb42;
+}
+
+/* Calendar */
+
+div.calendar {
+    height: max-content;
+    width: max-content;
+    border-radius: 4px;
+    background-color: #fd9883;
+    color: #fff;
+    padding: 19px;
+    border: 1px solid #dbdce0;
+    border-top: none;
+}
+
+.calendar .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.calendar .header div {
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.calendar .header .calendar-prev-arrow, 
+.calendar .header .calendar-next-arrow {
+    padding: 7px 12px;
+}
+
+.calendar .days-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* For pricing card */
+
+@media screen and (max-width: 645px){
+
+    .pricing-cards {
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    .pricing-card.blue{
+        top: 0;
+        left: 0;
+    }
+
+    .pricing-card.yellow{
+        top: 0;
+        right: 0;
+    }
+}

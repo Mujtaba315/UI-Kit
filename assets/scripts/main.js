@@ -570,7 +570,7 @@ $('.open-modal-btn').click(function(){
 });
 
 
-// panel accordion
+// panel accordion 
 
 // const accordionBtns = document.querySelectorAll(".accordion-panel-content");
 
@@ -598,14 +598,19 @@ accordionBtns.forEach((accordion) => {
 
     let content = this.nextElementSibling;
 
+    //console.log(" Outside", content.style.maxHeight);
+    
     if (content.style.maxHeight) {
       //this is if the accordion is open
+
+      //console.log("Inside", content.style.maxHeight);
       content.style.maxHeight = null;
     } else {
       //if the accordion is currently closed
-      let hnum = content.scrollHeight;
-      content.style.maxHeight = hnum + "px";
-      console.log(content.style.maxHeight);
+
+      //console.log("Else", content.style.maxHeight);
+      content.style.maxHeight = content.scrollHeight + "px";
+     //console.log("Else max_h", content.style.maxHeight);
     }
   };
 });
