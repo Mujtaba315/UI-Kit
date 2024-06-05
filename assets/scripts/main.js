@@ -614,3 +614,15 @@ accordionBtns.forEach((accordion) => {
     }
   };
 });
+
+// 5 / 6 / 24
+
+// Custom Calendar
+
+$( function() {
+	$( "#datepicker" ).datepicker({
+		dateFormat: "dd-mm-yy",
+		duration: "fast",
+        showOtherMonths: true
+	});
+} );

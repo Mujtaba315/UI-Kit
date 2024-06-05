@@ -6,7 +6,7 @@
 
 body{
     background-color: #f1f2f6;
-    padding-bottom: 100px;
+    padding-bottom: 300px;
 }
 
 /* buttons */
@@ -2764,12 +2764,12 @@ div.modals {
     color: #434a54;
 }
 
-.modal-content .footer {
+.modal-content .modal-footer {
     text-align: end;
     margin: 17px 0 0;
 }
 
-.modal-content .footer button {
+.modal-content .modal-footer button {
     width: 71px;
     height: 34px;
     border-radius: 4px;
@@ -2777,13 +2777,13 @@ div.modals {
     border: none;
 }
 
-.modal-content .footer button.close-btn {
+.modal-content .modal-footer button.close-btn {
     color: #434a54;
     border: 1px solid #aab2bd;
     box-sizing: border-box;
 }
 
-.modal-content .footer button.send-btn {
+.modal-content .modal-footer button.send-btn {
     color: #fff;
     background-color: #8cc152;
 }
@@ -3278,24 +3278,26 @@ div.pricing-card p {
     background-color: #f6bb42;
 }
 
+/* Day 5 / 6 / 24 */
+
 /* Calendar */
 
 div.calendar {
-    height: max-content;
-    width: max-content;
+    max-width: max-content;
     border-radius: 4px;
     background-color: #fd9883;
     color: #fff;
-    padding: 19px;
+    padding: 20px 19px;
     border: 1px solid #dbdce0;
     border-top: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .calendar .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 12px;
 }
 
 .calendar .header div {
@@ -3305,14 +3307,284 @@ div.calendar {
 
 .calendar .header .calendar-prev-arrow, 
 .calendar .header .calendar-next-arrow {
-    padding: 7px 12px;
+    padding: 6px 12px;
+}
+
+.calendar .header .calendar-prev-arrow {
+    margin: 3px 2px 0 0;
+}
+
+.calendar .header .calendar-next-arrow {
+    margin: 3px 0 0 2px;
+}
+
+.calendar .calendar-line {
+    padding: 15px 0 10px;
 }
 
 .calendar .days-name {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 10px 0;
 }
+
+.calendar .dates {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar .dates span {
+    padding: 10px 0;
+}
+
+.calendar .dates span.disabled {
+    color: #ee7f6d;
+}
+
+.calendar .dates-col-1,
+.calendar .dates-col-2,
+.calendar .dates-col-3,
+.calendar .dates-col-4,
+.calendar .dates-col-5,
+.calendar .dates-col-6,
+.calendar .dates-col-7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Custom Calendar */
+
+/* .wrapper {
+	max-width: 18rem;
+	padding: 0 0.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 4rem;
+}
+label {
+	font-size: 0.75rem;
+	font-weight: 400;
+	display: block;
+	margin-bottom: 0.5rem;
+	color: #B0BEC5;
+	border: 1px solid #ECEFF1;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+} */
+
+/* input {
+	font-family: 'Roboto', sans-serif;
+	display:block;
+	border: none;
+	border-radius: 0.25rem;
+	border: 1px solid transparent;
+	line-height: 1.5rem;
+	padding: 0;
+	font-size: 1rem;
+	color: #607D8B;
+	width: 100%;
+	margin-top: 0.5rem;
+}
+input:focus {outline: none;}
+#ui-datepicker-div {
+	display: none;
+	background-color: #fff;
+	box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+	margin-top: 0.25rem;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.ui-datepicker-calendar thead th {
+	padding: 0.25rem 0;
+	text-align: center;
+	font-size: 0.75rem;
+	font-weight: 400;
+	color: #78909C;
+}
+.ui-datepicker-calendar tbody td {
+	width: 2.5rem;
+	text-align: center;
+	padding: 0;
+}
+.ui-datepicker-calendar tbody td a {
+	display: block;
+	border-radius: 0.25rem;
+	line-height: 2rem;
+	transition: 0.3s all;
+	color: #546E7A;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+.ui-datepicker-calendar tbody td a:hover {	
+	background-color: #E0F2F1;
+}
+.ui-datepicker-calendar tbody td a.ui-state-active {
+	background-color: #009688;
+	color: white;
+}
+.ui-datepicker-header a.ui-corner-all {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	width: 2rem;
+	height: 2rem;
+	margin: 0.5rem;
+	border-radius: 0.25rem;
+	transition: 0.3s all;
+}
+.ui-datepicker-header a.ui-corner-all:hover {
+	background-color: #ECEFF1;
+}
+.ui-datepicker-header a.ui-datepicker-prev {	
+	left: 0;	
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+	background-repeat: no-repeat;
+	background-size: 0.5rem;
+	background-position: 50%;
+	transform: rotate(180deg);
+}
+.ui-datepicker-header a.ui-datepicker-next {
+	right: 0;
+	background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==');
+	background-repeat: no-repeat;
+	background-size: 10px;
+	background-position: 50%;
+}
+.ui-datepicker-header a>span {
+	display: none;
+}
+.ui-datepicker-title {
+	text-align: center;
+	line-height: 2rem;
+	margin-bottom: 0.25rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	padding-bottom: 0.25rem;
+}
+.ui-datepicker-week-col {
+	color: #78909C;
+	font-weight: 400;
+	font-size: 0.75rem;
+} */
+
+#datepicker {
+    max-width: max-content;
+    border-radius: 4px;
+    background-color: #fd9883;
+    color: #ee7f6d;
+    padding: 20px 19px;
+    border: 1px solid #dbdce0;
+    border-top: none;
+}
+
+#ui-datepicker-div {
+	display: none;
+	background-color: #fff;
+	box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+	margin-top: 0.25rem;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+    margin-left: -7px;
+    margin-right: -7px;
+}
+.ui-datepicker-calendar thead th {
+	padding: 1.25rem 0 0.625rem;
+	text-align: center;
+	font-size: 0.875rem;
+	font-weight: 400;
+    text-transform: uppercase ;
+	color: #fff;
+}
+.ui-datepicker-calendar tbody td {
+	width: 2.63rem;
+	text-align: center;
+	padding: 0;
+}
+.ui-datepicker-calendar tbody td a {
+	display: block;
+	border-radius: 50%;
+	line-height: 2.46rem;
+	transition: 0.3s all;
+	color: #fff;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+.ui-datepicker-calendar tbody td a:hover {	
+	cursor: pointer;
+}
+.ui-datepicker-calendar tbody td a.ui-state-active {
+	background-color: #fff;
+	color: #ee7f6d;
+}
+
+#datepicker .ui-datepicker-header{
+    border-bottom: 1px solid #ee7f6d;
+    position: relative;
+    padding-bottom: 7px;
+}
+
+.ui-datepicker-header a.ui-corner-all {
+	cursor: pointer;
+	position: absolute;
+	/* top: 0; */
+	width: 2rem;
+	height: 2rem;
+	/* margin: 0.5rem; */
+	/* border-radius: 0.25rem; */
+    border: 1px solid #fff;
+    border-radius: 50%;
+	transition: 0.3s all;
+}
+.ui-datepicker-header a.ui-corner-all:hover {
+	background-color: #ee7f6d;
+}
+.ui-datepicker-header a.ui-datepicker-prev {	
+	left: 0;	
+	/* background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg=="); */
+	background: url("../images/calendar_prev_arrow.png");
+    background-repeat: no-repeat;
+	/* background-size: 0.5rem; */
+	background-position: 50%;
+	/* transform: rotate(180deg); */
+}
+.ui-datepicker-header a.ui-datepicker-next {
+	right: 0;
+	/* background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg=='); */
+	background: url("../images/calendar_next_arrow.png");
+    background-repeat: no-repeat;
+	/* background-size: 10px; */
+	background-position: 50%;
+}
+.ui-datepicker-header a>span {
+	display: none;
+}
+.ui-datepicker-title {
+	text-align: center;
+	line-height: 2rem;
+	margin-bottom: 0.25rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	padding-bottom: 0.25rem;
+    color: #fff;
+}
+.ui-datepicker-week-col {
+	color: #78909C;
+	font-weight: 400;
+	font-size: 0.75rem;
+}
+
+
+/* Timeline */
+
 
 /* For pricing card */
 
