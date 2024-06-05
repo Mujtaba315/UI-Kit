@@ -3585,6 +3585,78 @@ table {
 
 /* Timeline */
 
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+content: '';
+position: absolute;
+width: 3px;
+background-color: #ccd1d9;
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: -3px;
+}
+
+.timeline .container {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 46%;
+}
+
+.timeline .container .content {
+    display: flex;
+    column-gap: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    color: #434a54;
+}
+
+.timeline .container .content h2 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.timeline .container .content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* The circles on the timeline */
+.timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: -17px;
+    background-color: #3aafda;
+    border: 4px solid #ffffff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+  
+/* Place the container to the left */
+.timeline .container.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.timeline .container.right {
+    left: 50%;
+}
+
+
+.timeline .container.right::after {
+    left: -16px;
+}
 
 /* For pricing card */
 
