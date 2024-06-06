@@ -319,10 +319,23 @@ $('.navbar-left-content .navbar-dropdown').hover(
 
 // Opening dropdown on click
 
-$('.search-navbar .navbar-left-content').click(function () {
-    $(this).toggleClass('open');
+$('.search-navbar .navbar-left-content .navbar-dropdown').click(function () {
+    $('.search-navbar .navbar-left-content').toggleClass('open');
 });
 
+// Menu dropdown 6 / 6 / 24
+
+$('.search-navbar-menu .search-navbar-menu-items .navbar-menu-dropdown').click(function(){
+    $('.search-navbar-menu .search-navbar-menu-items .menu-dd').toggleClass('open');
+});
+
+$('.search-navbar .navbar-right-content i').click(function(){
+    $('div.search-navbar-menu').toggleClass('open');
+});
+
+$('.search-navbar-menu .search-navbar-menu-close-icon i').click(function(){
+    $('div.search-navbar-menu').removeClass('open');
+});
 
 // Day 28 / 05 / 2024
 
@@ -626,3 +639,23 @@ $( function() {
         showOtherMonths: true
 	});
 } );
+
+
+// Day 6 / 6 / 24
+
+// Timeline
+
+// not working
+
+// let container = $('.timeline .container');
+// console.log(container);
+// // let after = getComputedStyle(container, ":after");
+// let style = window.getComputedStyle(container, [:after]);
+// console.log(style);
+// $(style).click(function(){
+//     console.log('h');
+// });
+
+// $('.timeline').on('click', '.container::after', function(){
+//     console.log('j');
+// });
