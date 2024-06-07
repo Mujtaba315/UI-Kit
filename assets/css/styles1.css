@@ -15,6 +15,8 @@ nav.search-navbar {
     border-bottom: 1px solid;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 2;
 }
 
 .search-navbar .navbar-left-content {
@@ -137,6 +139,8 @@ div.search-navbar-menu.open {
     opacity: 1;
     overflow: visible; */
     height: calc(100% - 52px);
+    position: fixed;
+    top: 52px;
 }
 
 /* div.search-navbar-menu .search-navbar-menu-close-icon{
