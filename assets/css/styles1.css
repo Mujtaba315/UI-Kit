@@ -1,0 +1,450 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+}
+
+nav.search-navbar {
+    width: 100%;
+    height: 52px;
+    background-color: #37bc9b;
+    color: #26816a;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-navbar .navbar-left-content {
+    display: flex;
+    align-items: center;
+    min-width: 20%;
+    justify-content: space-around;
+    position: relative;
+}
+
+.navbar-left-content .navbar-heading{
+    padding: 0px 22px 0 16px;
+}
+
+.navbar-left-content .navbar-items{
+    padding: 17px 15px;
+    cursor: default;
+}
+
+.navbar-left-content .navbar-items:hover{
+    background-color: #48cfad;
+    color: #fff;
+}
+
+
+.navbar-items .navbar-dropdown-arrow {
+    margin-bottom: 3px;
+    margin-left: 1px;
+}
+
+.navbar-left-content ul{
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 16px;
+    background-color: #37bc9b;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px black;
+    text-align: center;
+    cursor: default;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+.navbar-left-content.open ul{
+    visibility: visible;
+    height: 54px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+
+.navbar-left-content ul li{
+    padding: 4px 24px;
+}
+
+.navbar-left-content ul li:hover{
+    background-color: #48cfad;
+    color: #fff;
+}
+
+.navbar-left-content ul li:active{
+    background-color: #48cfad;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.search-navbar .navbar-right-content{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-navbar .navbar-right-content i {
+    display: none;
+}
+
+.navbar-right-content img{
+    position: absolute;
+    left: 17px;
+}
+
+.navbar-right-content input{
+    width: 237px;
+    height: 34px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 0 12px 0 41px;
+    margin-right: 25px;
+}
+
+/* Menu dropdown 6 / 6 / 24 */
+
+div.search-navbar-menu {
+    width: 100%;
+    height: 0;
+    background-color: #37bc9b;
+    color: #26816a;
+    /* border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px black; */
+    display: none;
+    /* visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; 
+    overflow: hidden;*/
+    position: absolute;
+    z-index: 2;
+}
+
+div.search-navbar-menu.open {
+    display: block;
+    /* visibility: visible;
+    opacity: 1;
+    overflow: visible; */
+    height: calc(100% - 52px);
+}
+
+/* div.search-navbar-menu .search-navbar-menu-close-icon{
+    display: flex;
+    justify-content: end;
+    padding: 10px 34px 10px 0;
+} */
+
+.search-navbar-menu .search-navbar-menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.search-navbar-menu 
+.search-navbar-menu-items 
+.navbar-menu-search {
+    width: 50%;
+}
+
+.search-navbar-menu 
+.search-navbar-menu-items 
+.navbar-menu-items {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-navbar-menu 
+.search-navbar-menu-items 
+.navbar-menu-items 
+.navbar-menu-dropdown-div {
+    width: max-content;
+    margin-top: 16px;
+}
+
+.search-navbar-menu .search-navbar-menu-items .menu-item {
+    padding: 7px 10px;
+    cursor: default;
+    width: max-content;
+}
+
+.search-navbar-menu 
+.search-navbar-menu-items 
+.search-navbar-menu-search-input {
+    width: 100%;
+    height: 34px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 0 12px 0 41px;
+    margin-bottom: 10px;
+}
+
+.search-navbar-menu 
+.search-navbar-menu-items 
+.search-navbar-menu-search-icon {
+    position: absolute;
+    left: 24%;
+    margin-left: 3.5%;
+    margin-top: 9px;
+}
+
+.search-navbar-menu .search-navbar-menu-items .menu-item:hover {
+    background-color: #48cfad;
+}
+
+.search-navbar-menu .menu-item .navbar-menu-dropdown-arrow {
+    margin-bottom: 3px;
+    margin-left: 1px;
+}
+
+.search-navbar-menu .search-navbar-menu-items ul {
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    text-align: center;
+    cursor: default;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.search-navbar-menu .search-navbar-menu-items.open ul {
+    visibility: visible;
+    height: 54px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.search-navbar-menu .search-navbar-menu-items ul li {
+    padding: 4px 24px;
+    border-bottom: 1px solid;
+    height: 27px;
+}
+
+.search-navbar-menu .search-navbar-menu-items ul li:hover {
+    background-color: #48cfad;
+}
+
+.search-navbar-menu .search-navbar-menu-items ul li:active {
+    background-color: #48cfad;
+    text-decoration: underline;
+}
+
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #ccd1d9;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline .month-year {
+    background-color: #a9b2bd;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5.33px 37.4px;
+    max-width: max-content;
+    font-size: 14px;
+    position: relative;
+    left: 50%;
+    margin: 30px 0 28px -65px;
+    z-index: 1;
+}
+
+.timeline span {
+    color: #5eb9de;
+    font-size: 14px;
+}
+
+.timeline .right-span {
+    position: absolute;
+    left: 50%;
+    margin-left: -78px;
+    margin-top: 21px;
+}
+
+.timeline .left-span {
+    position: absolute;
+    left: 50%;
+    margin-left: 46px;
+    margin-top: 21px;
+}
+
+.timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline .container .content {
+    display: flex;
+    column-gap: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    color: #434a54;
+}
+
+.timeline .container .content h2 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.timeline .container .content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* The circles on the timeline */
+.timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: -13px;
+    background-color: #3aafda;
+    border: 4px solid #ffffff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+  
+/* Place the container to the left */
+.timeline .container.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.timeline .container.right {
+    left: 50%;
+}
+
+.timeline .container.right::after {
+    left: -16px;
+}
+
+/* Add arrows to the left container (pointing right) */
+.timeline .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 33px;
+    border: medium solid white;
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent white;
+}
+  
+/* Add arrows to the right container (pointing left) */
+.timeline .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 33px;
+    border: medium solid white;
+    border-width: 8px 8px 8px 0;
+    border-color: transparent white transparent transparent;
+}
+
+
+/* Making navbar responsive */
+
+@media screen and (max-width: 600px){
+
+    .search-navbar .navbar-left-content .navbar-items {
+        display: none;
+    }
+
+    .search-navbar .navbar-right-content img,
+    .search-navbar .navbar-right-content input {
+        display: none;
+    }
+
+    /* for fixed navbar */
+    .search-navbar.fixed .navbar-right-content i {
+        display: block;
+        padding: 0px 33px;
+        font-size: 20px;
+    }
+}
+
+/* for timeline */
+
+@media screen and (max-width: 600px){
+
+    .timeline::after {
+        left: 20%;
+    }
+
+    .timeline .month-year {
+        left: 20%;
+        padding: 5.33px 20px;
+        margin: 30px 0 28px -45px;
+    }
+
+    .timeline .right-span, 
+    .timeline .left-span {
+        left: 20%;
+        margin: 0 0 0 46px;
+        position: relative;
+    }
+    
+    .timeline .container {
+        width: 80%;
+        padding: 5px 20px 20px 40px;
+    }
+
+    .timeline .container.right,
+    .timeline .container.left {
+        left: 20%;
+    }
+
+    .timeline .container::after {
+        left: -17px;
+    }
+
+    .timeline .container .content {
+        flex-direction: column;
+    }
+
+    .timeline .left::before {
+        left: 33px;
+        border-width: 8px 8px 8px 0;
+        border-color: transparent white transparent transparent;
+    }
+}
+

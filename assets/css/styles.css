@@ -1772,6 +1772,7 @@ nav.search-navbar {
     cursor: default;
     height: 0;
     transition: all 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 
@@ -1779,6 +1780,7 @@ nav.search-navbar {
     visibility: visible;
     height: 54px;
     opacity: 1;
+    overflow: hidden;
 }
 
 
@@ -1830,11 +1832,19 @@ div.search-navbar-menu {
     color: #26816a;
     border-radius: 4px;
     box-shadow: 0px 1px 3px 0px black;
-    display: none;
+    /* display: none; */
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
 div.search-navbar-menu.open {
-    display: block;
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
 }
 
 div.search-navbar-menu .search-navbar-menu-close-icon{
@@ -1853,6 +1863,27 @@ div.search-navbar-menu .search-navbar-menu-close-icon{
 .search-navbar-menu .search-navbar-menu-items .menu-item {
     padding: 5px 10px;
     cursor: default;
+}
+
+.search-navbar-menu 
+.search-navbar-menu-items 
+.search-navbar-menu-search-input {
+    width: 50%;
+    height: 34px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 0 12px 0 41px;
+    margin-bottom: 5px;
+}
+
+.search-navbar-menu 
+.search-navbar-menu-items 
+.search-navbar-menu-search-icon {
+    position: absolute;
+    left: 24%;
+    margin-left: 23px;
+    margin-top: 8px;
 }
 
 .search-navbar-menu .search-navbar-menu-items .menu-item:hover {
@@ -1877,12 +1908,14 @@ div.search-navbar-menu .search-navbar-menu-close-icon{
     cursor: default;
     height: 0;
     transition: all 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .search-navbar-menu .search-navbar-menu-items .menu-dd.open ul {
     visibility: visible;
     height: 54px;
     opacity: 1;
+    overflow: hidden;
 }
 
 .search-navbar-menu .search-navbar-menu-items ul li {
@@ -1897,6 +1930,7 @@ div.search-navbar-menu .search-navbar-menu-close-icon{
     background-color: #48cfad;
     text-decoration: underline;
 }
+
 
 /* navbar 2 */
 
@@ -3801,6 +3835,57 @@ table {
     border-color: transparent white transparent transparent;
 }
 
+
+/* Fixed search navbar 7 / 6 / 24 */
+
+nav.search-navbar.fixed {
+    margin: -8px -8px 0;
+    width: 100vw;
+    border-radius: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.search-navbar.fixed .navbar-heading {
+    padding-left: 17px;
+}
+
+div.search-navbar-menu.fixed {
+    width: 100vw;
+    /* height: 100vh; */
+    margin: 0 -8px -308px;
+    color: #26816a;
+    /* border-radius: 4px; */
+    /* box-shadow: 0px 1px 3px 0px black; */
+    display: none;
+    /* visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; */
+}
+
+div.search-navbar-menu.open {
+    display: block;
+    /* overflow: visible;
+    visibility: visible;
+    opacity: 1; */
+    
+}
+
+div.search-navbar-menu.fixed .search-navbar-menu-close-icon {
+    padding-right: 35px;
+}
+
+.search-navbar-menu.fixed .search-navbar-menu-items ul {
+    box-shadow: none;
+}
+
+.search-navbar-menu.fixed .search-navbar-menu-items ul li {
+    border-bottom: 1px solid;
+}
+
+
 /* For pricing card */
 
 @media screen and (max-width: 645px){
@@ -3885,5 +3970,11 @@ table {
         display: block;
         padding: 0 20px;
         font-size: 20px;
+    }
+
+
+    /* for fixed navbar */
+    .search-navbar.fixed .navbar-right-content i {
+        padding: 0px 33px;
     }
 }

@@ -331,11 +331,30 @@ $('.search-navbar-menu .search-navbar-menu-items .navbar-menu-dropdown').click(f
 
 $('.search-navbar .navbar-right-content i').click(function(){
     $('div.search-navbar-menu').toggleClass('open');
+    if ( !($('div.search-navbar-menu').hasClass('open')) ){
+        $('div.search-navbar-menu').css('height', 0);
+    }
+    let h = $('.search-navbar-menu').prop('scrollHeight');
+    $('div.search-navbar-menu.open').css('height', h);
 });
 
 $('.search-navbar-menu .search-navbar-menu-close-icon i').click(function(){
+    $('div.search-navbar-menu').css('height', 0);
     $('div.search-navbar-menu').removeClass('open');
 });
+
+// Closing navbar menu if screen width > 600
+
+$(document).load($(window).bind("resize", checkPosition));
+function checkPosition()
+{
+    if ($(window).width() > 600){
+        $('div.search-navbar-menu').removeClass('open');
+    }
+}
+
+// console.log($('.search-navbar-menu').height());
+// console.log($('.search-navbar-menu').prop('scrollHeight'));
 
 // Day 28 / 05 / 2024
 
@@ -659,3 +678,4 @@ $( function() {
 // $('.timeline').on('click', '.container::after', function(){
 //     console.log('j');
 // });
+
