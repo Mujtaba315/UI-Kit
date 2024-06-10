@@ -1,3 +1,5 @@
+// Fixed search navbar 7 / 6 / 24 
+
 // Search navbar
 
 // Changing dropdown arrow on hover
@@ -29,6 +31,12 @@ $('.search-navbar-menu .search-navbar-menu-items .navbar-menu-dropdown').click(f
 
 $('.search-navbar .navbar-right-content i').click(function(){
     $('div.search-navbar-menu').toggleClass('open');
+
+    if ( $('div.search-navbar-menu').hasClass('open') ) {
+        $('.search-navbar.fixed .navbar-right-content i').css('padding-right', '46.5px');
+    } else {
+        $('.search-navbar.fixed .navbar-right-content i').css('padding-right', '33px');
+    }
 });
 
 // $('.search-navbar-menu .search-navbar-menu-close-icon i').click(function(){
@@ -44,3 +52,6 @@ function checkPosition()
         $('div.search-navbar-menu').removeClass('open');
     }
 }
+
+
+// 10 / 6 / 24
