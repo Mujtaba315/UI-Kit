@@ -634,3 +634,20 @@ body:has(div.search-navbar-sidebar.open){
     }
 }
 
+/* for footer 11 / 6 / 24 */
+
+@media screen and (max-width: 800px){
+    .footer .content {
+        flex-direction: column;
+    }
+
+    .footer .content .logo {
+        justify-content: center;
+    }
+
+    .footer .content .text-content {
+        flex-direction: column;
+        margin: 0 50%;
+        transform: translateX(-50px);
+    }
+}
