@@ -637,6 +637,7 @@ body:has(div.search-navbar-sidebar.open){
 /* for footer 11 / 6 / 24 */
 
 @media screen and (max-width: 800px){
+
     .footer .content {
         flex-direction: column;
     }
@@ -644,8 +645,18 @@ body:has(div.search-navbar-sidebar.open){
     .footer .content .logo {
         justify-content: center;
         padding-right: 0;
+        margin-bottom: 10px;
     }
 
+    .footer .content .text-content {
+        column-gap: 50px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 650px){   
     .footer .content .text-content {
         flex-direction: column;
         /* margin: 0 50%;
@@ -653,3 +664,4 @@ body:has(div.search-navbar-sidebar.open){
         text-align: center;
     }
 }
+
