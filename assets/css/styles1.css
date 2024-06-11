@@ -643,11 +643,13 @@ body:has(div.search-navbar-sidebar.open){
 
     .footer .content .logo {
         justify-content: center;
+        padding-right: 0;
     }
 
     .footer .content .text-content {
         flex-direction: column;
-        margin: 0 50%;
-        transform: translateX(-50px);
+        /* margin: 0 50%;
+        transform: translateX(-50px); */
+        text-align: center;
     }
 }
