@@ -2481,6 +2481,7 @@ div.pagers {
     visibility: hidden;
     transition: all 0.3s ease-in-out;
     width: 100%;
+    overflow: hidden;
     /* display: none; */
 }
 
@@ -2489,6 +2490,7 @@ div.pagers {
     opacity: 1;
     max-height: 10rem;
     padding: 10px;
+    overflow: hidden;
     /* display: block; */
 }
 
@@ -2527,6 +2529,7 @@ div.pagers {
     visibility: hidden;
     transition: all 0.3s ease-in-out;
     border-bottom: 1px solid #e8e9ec;
+    overflow: hidden;
     /* display: none; */
 }
 
@@ -2535,6 +2538,7 @@ div.pagers {
     opacity: 1;
     max-height: 10rem;
     padding: 10px;
+    overflow: hidden;
     /* display: block; */
 }
 

@@ -476,14 +476,18 @@ $('.accordions .accordion-item').click(function(){
         
         if (accordion_item1_flag == false){
             $('.accordions .accordion-item').removeClass('active');
+            $('.accordions .accordion-item .item-text').css('max-height', '0');
             $(this).addClass('active');
             accordion_item1_flag = true;
             accordion_item2_flag = false; 
             accordion_item3_flag = false;
+            let ach = $('.accordions .accordion-item.active .item-text').prop('scrollHeight');
+            $('.accordions .accordion-item.active .item-text').css('max-height', ach);
             
         } else {
             $('.accordions .accordion-item').removeClass('active');
-            accordion_item1_flag = false;        
+            accordion_item1_flag = false;
+            $('.accordions .accordion-item .item-text').css('max-height', '0');        
         }
     }
 
@@ -491,14 +495,18 @@ $('.accordions .accordion-item').click(function(){
         
         if (accordion_item2_flag == false){
             $('.accordions .accordion-item').removeClass('active');
+            $('.accordions .accordion-item .item-text').css('max-height', '0');
             $(this).addClass('active');
             accordion_item2_flag = true;
             accordion_item1_flag = false; 
             accordion_item3_flag = false;
+            let ach = $('.accordions .accordion-item.active .item-text').prop('scrollHeight');
+            $('.accordions .accordion-item.active .item-text').css('max-height', ach);
             
         } else {
             $('.accordions .accordion-item').removeClass('active');
-            accordion_item2_flag = false;  
+            accordion_item2_flag = false;
+            $('.accordions .accordion-item .item-text').css('max-height', '0');  
         }
     }
 
@@ -506,14 +514,18 @@ $('.accordions .accordion-item').click(function(){
         
         if (accordion_item3_flag == false){
             $('.accordions .accordion-item').removeClass('active');
+            $('.accordions .accordion-item .item-text').css('max-height', '0');
             $(this).addClass('active');
             accordion_item3_flag = true;
             accordion_item1_flag = false; 
             accordion_item2_flag = false;
+            let ach = $('.accordions .accordion-item.active .item-text').prop('scrollHeight');
+            $('.accordions .accordion-item.active .item-text').css('max-height', ach);
             
         } else {
             $('.accordions .accordion-item').removeClass('active');
-            accordion_item3_flag = false;   
+            accordion_item3_flag = false;
+            $('.accordions .accordion-item .item-text').css('max-height', '0'); 
         }
     }
 });
@@ -531,14 +543,17 @@ $('.white-accordions .white-accordion-item').click(function(){
         
         if (white_accordion_item1_flag == false){
             $('.white-accordions .white-accordion-item').removeClass('active');
+            $('.white-accordions .white-accordion-item .item-text').css('max-height', '0');
             $(this).addClass('active');
             white_accordion_item1_flag = true;
             white_accordion_item2_flag = false; 
             white_accordion_item3_flag = false;
-            
+            let ah = $('.white-accordions .white-accordion-item.active .item-text').prop('scrollHeight');
+            $('.white-accordions .white-accordion-item.active .item-text').css('max-height', ah);
         } else {
             $('.white-accordions .white-accordion-item').removeClass('active');
-            white_accordion_item1_flag = false;        
+            white_accordion_item1_flag = false; 
+            $('.white-accordions .white-accordion-item .item-text').css('max-height', '0');       
         }
     }
 
@@ -546,14 +561,18 @@ $('.white-accordions .white-accordion-item').click(function(){
         
         if (white_accordion_item2_flag == false){
             $('.white-accordions .white-accordion-item').removeClass('active');
+            $('.white-accordions .white-accordion-item .item-text').css('max-height', '0');
             $(this).addClass('active');
             white_accordion_item2_flag = true;
             white_accordion_item1_flag = false; 
             white_accordion_item3_flag = false;
+            let ah = $('.white-accordions .white-accordion-item.active .item-text').prop('scrollHeight');
+            $('.white-accordions .white-accordion-item.active .item-text').css('max-height', ah);
             
         } else {
             $('.white-accordions .white-accordion-item').removeClass('active');
-            white_accordion_item2_flag = false;  
+            white_accordion_item2_flag = false;
+            $('.white-accordions .white-accordion-item .item-text').css('max-height', '0');  
         }
     }
 
@@ -561,14 +580,18 @@ $('.white-accordions .white-accordion-item').click(function(){
         
         if (white_accordion_item3_flag == false){
             $('.white-accordions .white-accordion-item').removeClass('active');
+            $('.white-accordions .white-accordion-item .item-text').css('max-height', '0');
             $(this).addClass('active');
             white_accordion_item3_flag = true;
             white_accordion_item1_flag = false; 
             white_accordion_item2_flag = false;
+            let ah = $('.white-accordions .white-accordion-item.active .item-text').prop('scrollHeight');
+            $('.white-accordions .white-accordion-item.active .item-text').css('max-height', ah);
             
         } else {
             $('.white-accordions .white-accordion-item').removeClass('active');
-            white_accordion_item3_flag = false;   
+            white_accordion_item3_flag = false;
+            $('.white-accordions .white-accordion-item .item-text').css('max-height', '0');   
         }
     }
 });
